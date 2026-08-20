@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paz-ink: #182a21;
+  --color-paz-forest: #05352e;
+  --color-paz-charcoal: #211b1d;
+  --color-paz-paper: #fdf2e4;
+  --color-paz-paper-muted: #f4ece2;
+  --color-paz-cobalt: #5b86ff;
+  --color-paz-marigold: #fddc42;
+  --color-paz-coral: #ec532a;
+  --color-paz-rose: #f8bfc0;
+  --color-paz-mint: #85bcb0;
+  --color-paz-clay: #a66a67;
+  --color-paz-status-red: #c8392b;
+  --color-paz-status-amber: #c07a13;
+  --color-paz-status-green: #0f6e56;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 14px rgba(24, 42, 33, 0.06);
+  --shadow-elevated: 0 10px 30px rgba(5, 53, 46, 0.12);
+}
+
+body {
+  background-color: var(--color-paz-paper);
+  color: var(--color-paz-ink);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ece2;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5beba;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #85bcb0;
+}
+
+/* PRINT STYLES — Estabilizado para formato Carta y Oficio sin cortes */
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 12mm 14mm 12mm 14mm;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Evitar cortes a la mitad en tarjetas, tablas y bloques lógicos */
+  .print-avoid-break,
+  .shadow-card,
+  table,
+  tr,
+  td,
+  th,
+  .print-card,
+  .print-section {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-page-break {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Reset box shadows and paddings for clean printing */
+  .shadow-card, .shadow-elevated {
+    box-shadow: none !important;
+    border: 1px solid #d5d2c9 !important;
+  }
+
+  /* Remove max-width constraints for full page utilization */
+  .max-w-6xl, .max-w-5xl, .max-w-7xl {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.2, 0, 0, 1) forwards;
+}

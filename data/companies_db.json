@@ -1,0 +1,356 @@
+[
+  {
+    "id": "comp_1787266868686",
+    "name": "Alpinito",
+    "contactEmail": "Alpinito@correo.com",
+    "sector": "Alimentos, Gourmet y Bebidas",
+    "customSector": "",
+    "employees": "1 a 10 empleados",
+    "location": "bogotá",
+    "consultantName": "Julio",
+    "accessCode": "PAZ2026",
+    "createdAt": "2026-08-20T23:01:08.686Z",
+    "updatedAt": "2026-08-20T23:06:40.865Z",
+    "status": "in_progress",
+    "instruments": {
+      "01": {
+        "instrumentId": "01",
+        "responses": {
+          "G01": {
+            "status": "D",
+            "selectedOption": "Crecimiento en ventas y expansión",
+            "notes": "hacemos un servicio que implica un reconocimiento de asistencia total. \npor eso...  jajaja jaja a jaja "
+          },
+          "G02": {
+            "status": "P",
+            "notes": "Siendo así, lo que hemos dejado listo es e proceso de compra venta  por eso "
+          },
+          "G03": {
+            "status": "P",
+            "notes": ""
+          }
+        },
+        "scores": {},
+        "completed": true
+      }
+    }
+  },
+  {
+    "id": "comp_1787263080985",
+    "name": "Restaurante el tambor",
+    "contactEmail": "eltambor@gmail.com",
+    "sector": "Alimentos, Gourmet y Bebidas",
+    "customSector": "",
+    "employees": "1 a 10 empleados",
+    "location": "Guymaral",
+    "consultantName": "JULIO",
+    "accessCode": "PAZ2026",
+    "createdAt": "2026-08-20T21:58:00.985Z",
+    "updatedAt": "2026-08-20T22:52:11.074Z",
+    "status": "in_progress",
+    "instruments": {
+      "04": {
+        "instrumentId": "04",
+        "responses": {
+          "CV01": {
+            "status": "D",
+            "notes": "por medio de un campo de acción  "
+          }
+        },
+        "scores": {},
+        "completed": true
+      },
+      "01": {
+        "instrumentId": "01",
+        "responses": {
+          "G01": {
+            "status": "D",
+            "notes": "JJ L luc en"
+          }
+        },
+        "scores": {},
+        "completed": true
+      }
+    }
+  },
+  {
+    "id": "comp_1787262750030",
+    "name": "Casta Gourmet",
+    "contactEmail": "gerencia@castagourmet.com",
+    "sector": "Alimentos, Gourmet y Bebidas",
+    "customSector": "",
+    "employees": "51 a 200 empleados",
+    "location": "Planta Principal",
+    "consultantName": "Carlos Gomez",
+    "accessCode": "PAZ2026",
+    "createdAt": "2026-08-20T21:52:30.030Z",
+    "updatedAt": "2026-08-20T22:58:03.141Z",
+    "status": "analyzed",
+    "instruments": {
+      "01": {
+        "instrumentId": "01",
+        "responses": {
+          "G01": {
+            "status": "V",
+            "selectedOption": "Crecimiento en ventas y expansión",
+            "notes": "Test word space"
+          }
+        },
+        "scores": {
+          "Estrategia y liderazgo": {
+            "score": 2,
+            "mainEvidence": "",
+            "priorityGap": ""
+          }
+        },
+        "completed": true
+      }
+    },
+    "diagnosticResult": {
+      "generatedAt": "20 de agosto de 2026 a las 05:17 p. m.",
+      "companyName": "Casta Gourmet",
+      "executiveSummary": "El diagnóstico integral realizado a **Casta Gourmet** (Sector: Alimentos, Gourmet y Bebidas, 51 a 200 empleados empleados) evidencia una organización con alto potencial de optimización mediante tecnologías de Inteligencia Artificial aplicadas y gobernadas. Se identifica un índice de madurez digital y de IA del **43%** (con vulnerabilidades prioritarias en controles y automatización). Siguiendo la metodología de PAZ ORTEGA IA (*Land-and-Expand*), se recomienda iniciar con una solución de alto impacto y bajo riesgo en el área de mayor exposición, para luego consolidar la gobernanza institucional (*ISO/IEC 42001*) y el ecosistema de agentes supervisados.",
+      "globalMaturityScore": 43,
+      "overallRiskLevel": "Alto",
+      "dimensionScores": [
+        {
+          "dimension": "Gerencia, administración y finanzas",
+          "score": 40,
+          "level": "Repetible / Parcial",
+          "finding": "Estrategia financiera centrada en costos reactivos; los datos operativos están fragmentados en hojas de cálculo y no alimentan decisiones predictivas (Opciones clave: Crecimiento en ventas y expansión)."
+        },
+        {
+          "dimension": "Recursos humanos y gestión del cambio",
+          "score": 44,
+          "level": "Repetible / Parcial",
+          "finding": "Alta dependencia del conocimiento tácito de operarios clave; procesos no documentados formalmente y resistencia potencial al cambio tecnológico."
+        },
+        {
+          "dimension": "Producción y cadena de transformación",
+          "score": 44,
+          "level": "Repetible / Parcial",
+          "finding": "Cadena de transformación con registros manuales en papel; paradas de máquina y causas de merma no cuantificadas en tiempo real."
+        },
+        {
+          "dimension": "Embalaje, logística y visión artificial",
+          "score": 44,
+          "level": "Repetible / Parcial",
+          "finding": "Inspección de embalaje, sellado y etiquetado sujeta a error humano por fatiga; condiciones de iluminación y cámaras viables para visión artificial."
+        },
+        {
+          "dimension": "Gobernanza, datos, riesgos y cumplimiento",
+          "score": 44,
+          "level": "Repetible / Parcial",
+          "finding": "Inexistencia de marco de gobernanza, inventario de IA ni protocolos de privacidad de datos; riesgo de sanciones y fuga de información."
+        },
+        {
+          "dimension": "ROI, priorización y cierre comercial",
+          "score": 44,
+          "level": "Repetible / Parcial",
+          "finding": "Línea base económica dispersa; el costo de merma y reproceso no está totalmente cargado al costo unitario del SKU final."
+        }
+      ],
+      "criticalBottlenecks": [
+        {
+          "area": "Producción & Empaque",
+          "description": "Dependencia de inspección visual humana 100% manual con fatiga visual en turnos extensos y sellado térmico irregular.",
+          "consequence": "Riesgo de despacho de unidades defectuosas, penalizaciones en canal retail y costo de devolución.",
+          "aiRemedy": "Implementar Visión Artificial Edge (Ultralytics / YOLO) con semáforo luminoso y confirmación humana en fallas."
+        },
+        {
+          "area": "Gobernanza & Datos",
+          "description": "Uso no regulado de herramientas públicas de IA por parte de colaboradores con información de recetas, clientes y proveedores.",
+          "consequence": "Exposición de secretos industriales y posible incumplimiento de protección de datos (Ley 1581).",
+          "aiRemedy": "Adoptar Política de Gobernanza de IA (ISO 42001), inventario de herramientas y canal institucional privado RAG."
+        },
+        {
+          "area": "Administración & Finanzas",
+          "description": "Conciliación y digitación manual de órdenes de producción y planillas físicas en software contable y hojas de cálculo dispersas.",
+          "consequence": "Desfase de hasta 48 horas en visibilidad de inventarios y más de 80 horas hombre mensuales dedicadas a digitación.",
+          "aiRemedy": "Automatización de extracción documental (OCR inteligente) y sincronización directa con base de datos."
+        }
+      ],
+      "opportunitiesMatrix": [
+        {
+          "id": "OP-01",
+          "process": "Inspección de Embalaje, Sellado y Etiquetado",
+          "problem": "Detección tardía de sellos defectuosos o etiquetas desalineadas con inspección visual manual intermitente.",
+          "proposedAI": "Sistema de Visión Artificial Edge con Ultralytics / YOLO para inspección en línea a alta velocidad.",
+          "category": "Visión Artificial",
+          "impact": "Crítico",
+          "risk": "Controlado",
+          "estimatedCost": "USD $3,500 - $6,000 (Piloto)",
+          "estimatedBenefit": "Ahorro de $1,800/mes en mermas y prevención de rechazo de lotes en retail",
+          "priority": "P1 - Inmediata (0-90d)",
+          "landAndExpandStage": "Land (Quick Win)"
+        },
+        {
+          "id": "OP-02",
+          "process": "Gestión Documental y Asuntos Contractuales",
+          "problem": "Revisión manual de contratos de proveedores, acuerdos de confidencialidad y fichas técnicas de materias primas.",
+          "proposedAI": "PAZ Pro Legal Tech: Asistente de análisis de contratos, extracción de cláusulas críticas y matriz de riesgos.",
+          "category": "Legal Tech / PAZ",
+          "impact": "Alto",
+          "risk": "Bajo",
+          "estimatedCost": "USD $1,200/mes (SaaS + Consultoría)",
+          "estimatedBenefit": "Reducción del 75% en tiempo de revisión y prevención de riesgos legales",
+          "priority": "P1 - Inmediata (0-90d)",
+          "landAndExpandStage": "Land (Quick Win)"
+        },
+        {
+          "id": "OP-03",
+          "process": "Capacitación Operativa y Manuales de Procedimiento (SOP)",
+          "problem": "Curva de inducción de personal nuevo prolongada (3-4 semanas) por manuales extensos no consultados.",
+          "proposedAI": "Asistente de Conocimiento RAG Empresarial sobre procedimientos operativos estándar, recetas y BPM.",
+          "category": "Chatbot / RAG",
+          "impact": "Medio",
+          "risk": "Bajo",
+          "estimatedCost": "USD $2,500 implementación inicial",
+          "estimatedBenefit": "Reducción de curva de aprendizaje en un 50% y menor dependencia de expertos clave",
+          "priority": "P2 - Mediano plazo (3-6m)",
+          "landAndExpandStage": "Expand (Core)"
+        },
+        {
+          "id": "OP-04",
+          "process": "Trazabilidad y Alertas de Producción",
+          "problem": "Desfase de información entre la orden emitida y el consumo real de ingredientes en planta.",
+          "proposedAI": "Agente Autónomo Operativo para correlación de pesaje, alertas de desvío y cálculo de rendimiento por lote.",
+          "category": "Agentes Autónomos",
+          "impact": "Alto",
+          "risk": "Controlado",
+          "estimatedCost": "USD $4,000 - $7,500",
+          "estimatedBenefit": "Control estricto de mermas de formulación (ahorro ~3% costo insumos)",
+          "priority": "P2 - Mediano plazo (3-6m)",
+          "landAndExpandStage": "Expand (Core)"
+        },
+        {
+          "id": "OP-05",
+          "process": "Gobernanza Institucional y Auditoría de IA",
+          "problem": "Uso de herramientas de IA sin política corporativa, sin DPIA ni inventario de sistemas algorítmicos.",
+          "proposedAI": "Implementación del Sistema de Gestión de Gobernanza en IA (ISO/IEC 42001 & NIST AI RMF).",
+          "category": "Gobernanza ISO 42001",
+          "impact": "Crítico",
+          "risk": "Bajo",
+          "estimatedCost": "USD $3,000 - $5,500 estructuración",
+          "estimatedBenefit": "Blindaje legal, cumplimiento ante clientes corporativos y certificación internacional",
+          "priority": "P3 - Maduración (6-12m)",
+          "landAndExpandStage": "Control Center"
+        }
+      ],
+      "roadmap": [
+        {
+          "phase": 1,
+          "title": "Fase 1: Quick Win & Piloto de Validación (0 a 90 días)",
+          "timeframe": "Meses 1 - 3",
+          "objective": "Generar impacto económico inmediato y medible en el cuello de botella más crítico de la planta, reduciendo errores y tiempo con supervisión humana.",
+          "deliverables": [
+            "Prueba de concepto (PoC) en estación prioritaria (Visión por computador / Automatización documental)",
+            "Dataset inicial etiquetado y calibración de umbrales en sitio",
+            "Protocolo de supervisión humana (Human-in-the-loop) y contingencia manual",
+            "Medición semanal de reducción de defectos y horas hombre ahorradas"
+          ],
+          "pazSolutions": [
+            "Sistema de Visión Artificial Edge con Ultralytics / YOLO para inspección en línea a alta velocidad.",
+            "Automatización de alertas operativas e incidencias"
+          ],
+          "keyKPI": "Reducción de al menos un 60% en eventos de no-conformidad y recuperación de inversión proyectada en < 4 meses."
+        },
+        {
+          "phase": 2,
+          "title": "Fase 2: Expansión Operativa, LegalTech & Gestión del Conocimiento",
+          "timeframe": "Meses 4 - 6",
+          "objective": "Conectar la automatización de planta con la administración, contratos de proveedores y capacitación continua de personal.",
+          "deliverables": [
+            "Implementación de Asistente de Conocimiento Interno (RAG) para manuales operativos, BPM y recetas",
+            "Despliegue de PAZ (Legal Tech) para auditoría de contratos de proveedores, SLA y cumplimiento comercial",
+            "Integración con ERP / hojas de cálculo para reporte automático de KPIs diarios",
+            "Capacitación de mandos medios y operarios en operación asistida por IA"
+          ],
+          "pazSolutions": [
+            "PAZ Legal Tech (Revisión contractual & compliance)",
+            "Asistente RAG Organizacional sobre documentación de procesos",
+            "Automatizaciones de flujos administrativos"
+          ],
+          "keyKPI": "Ahorro recurrente de más de 120 horas/mes en gestión documental y cero discrepancias contractuales con proveedores."
+        },
+        {
+          "phase": 3,
+          "title": "Fase 3: Gobernanza Integral ISO 42001 & AI Control Center",
+          "timeframe": "Meses 7 - 12+",
+          "objective": "Establecer la estructura de gobierno permanente, sistema multi-agente supervisado y panel centralizado de control corporativo.",
+          "deliverables": [
+            "Implementación del Sistema de Gestión de IA conforme a ISO/IEC 42001 y NIST AI RMF",
+            "Inventario vivo de modelos, agentes y políticas de privacidad de datos",
+            "AI Control Center: Tablero unificado de supervisión, auditoría de decisiones y aprobaciones",
+            "Acompañamiento continuo y monitoreo de deriva de modelos (Drift detection)"
+          ],
+          "pazSolutions": [
+            "AI Control Center (Supervisión Multi-Agente & Logs)",
+            "Marco de Gobernanza & Compliance ISO/IEC 42001",
+            "Mesa de Acompañamiento y Mantenimiento Recurrente"
+          ],
+          "keyKPI": "Cumplimiento normativo 100% auditable y escalabilidad a nuevas líneas de producción sin fricción operacional."
+        }
+      ],
+      "financialScenarios": [
+        {
+          "name": "Conservador",
+          "monthlySavings": "$1,500 USD / mes",
+          "annualSavings": "$18,000 USD / año",
+          "estimatedInvestment": "$4,500 USD (Etapa inicial)",
+          "estimatedPaybackMonths": 3.5,
+          "estimatedROI": "300% en el primer año",
+          "keyAssumptions": "Reducción mínima del 40% en fallas de empaque y 30 horas/mes de trabajo administrativo automatizado."
+        },
+        {
+          "name": "Esperado",
+          "monthlySavings": "$3,200 USD / mes",
+          "annualSavings": "$38,400 USD / año",
+          "estimatedInvestment": "$7,200 USD (Fases 1 y 2)",
+          "estimatedPaybackMonths": 2.3,
+          "estimatedROI": "433% en el primer año",
+          "keyAssumptions": "Reducción del 75% en defectos visuales, optimización de formulación y reducción del 65% en revisión contractual."
+        },
+        {
+          "name": "Optimista",
+          "monthlySavings": "$5,800 USD / mes",
+          "annualSavings": "$69,600 USD / año",
+          "estimatedInvestment": "$11,000 USD (Ecosistema completo)",
+          "estimatedPaybackMonths": 1.9,
+          "estimatedROI": "532% en el primer año",
+          "keyAssumptions": "Escalabilidad a todas las líneas de producción, cero reprocesos y optimización total de la cadena de valor."
+        }
+      ],
+      "governanceAndComplianceNotes": {
+        "iso42001Gaps": [
+          "Falta de inventario formal de sistemas y herramientas de IA utilizadas por el personal.",
+          "Ausencia de roles y responsabilidades formalizadas para la aprobación de modelos de IA.",
+          "Inexistencia de un procedimiento de gestión de incidentes y deriva algorítmica."
+        ],
+        "nistAiRmfGaps": [
+          "Función MAP: No se han mapeado los riesgos de sesgo, falsos positivos o fallas de conectividad.",
+          "Función MANAGE: No existen controles periódicos de exactitud y precisión documentados."
+        ],
+        "privacyAndDataGaps": [
+          "Uso de cámaras de planta sin política de tratamiento de datos e imágenes actualizada.",
+          "Falta de acuerdos de confidencialidad y procesamiento de datos (DPA) con proveedores de software cloud."
+        ],
+        "humanInTheLoopRequirements": [
+          "Toda decisión de descarte de lote o parada de línea debe contar con botón de bypass o validación del operario de turno.",
+          "Las alertas de calidad deben registrar la aprobación del jefe de turno antes de generar nota de débito al proveedor."
+        ]
+      },
+      "recommendedServicePackage": {
+        "title": "Programa Integral de Adopción y Gobernanza en IA (PAZ ORTEGA 360°)",
+        "shortDescription": "Implementación combinada de Solución Tecnológica en Planta + Marco de Gobernanza ISO 42001 + Legal Tech para acompañamiento continuo.",
+        "includedModules": [
+          "Módulo 1: PoC Visión Artificial / Automatización Crítica (60-90 días)",
+          "Módulo 2: Marco de Gobernanza, Políticas y Matriz de Riesgos ISO/IEC 42001",
+          "Módulo 3: Asistente Legal Tech PAZ para contratos y compliance",
+          "Módulo 4: Mesa de Supervisión y Mantenimiento de Modelos"
+        ],
+        "nextStepRecommendation": "Agendar Sesión de Validación Técnica en Planta para toma de muestra de datos y firma del acuerdo de prueba piloto de 90 días."
+      }
+    }
+  }
+]
