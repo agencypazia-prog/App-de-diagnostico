@@ -1,5 +1,5 @@
-import React from 'react';
-import { Shield, Building2, UserCheck, LogOut, FileSpreadsheet, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Shield, Building2, UserCheck, LogOut, FileSpreadsheet, Sparkles, Share2 } from 'lucide-react';
 import { CompanyProfile } from '../types';
 
 interface NavbarProps {
@@ -21,6 +21,19 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeView,
   setActiveView,
 }) => {
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  const handleCopyClientLink = async () => {
+    const url = `${window.location.origin}/diagnostico`;
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch {
+      window.prompt('Copia este enlace para el cliente', url);
+    }
+    setLinkCopied(true);
+    window.setTimeout(() => setLinkCopied(false), 2000);
+  };
+
   return (
     <header className="sticky top-0 z-40 bg-[#05352E] text-[#FDF2E4] border-b border-[#182A21]/30 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,8 +92,18 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           )}
 
-          {/* Right actions: New Company, Consultant & Logout */}
-          <div className="flex items-center space-x-3">
+          {/* Right actions: New Company, Client Chat Assistant Link & Consultant Info */}
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <button
+              onClick={handleCopyClientLink}
+              title="Copiar enlace del chatbot para enviárselo al cliente"
+              className="bg-indigo-600/90 hover:bg-indigo-500 text-white text-xs font-semibold px-3 py-1.5 rounded-full transition-all flex items-center gap-1.5 shadow-sm border border-indigo-400/30"
+            >
+              <Share2 className="w-3.5 h-3.5 text-cyan-300" />
+              <span className="hidden sm:inline">{linkCopied ? 'Enlace copiado' : 'Copiar enlace cliente'}</span>
+              <span className="sm:hidden">{linkCopied ? 'Copiado' : 'Enlace'}</span>
+            </button>
+
             <button
               onClick={onNewCompany}
               className="bg-[#85BCB0] hover:bg-[#85BCB0]/90 text-[#05352E] text-xs font-semibold px-3 py-1.5 rounded-full transition-all flex items-center gap-1.5 shadow-sm"

@@ -5,3 +5,8 @@ dist
 .env
 .env.local
 .firebase
+
+# Runtime client data (companies/conversations) — not source, must not be committed
+data/companies_db.json
+data/empresas.json
+data/conversaciones.json

@@ -5,31 +5,52 @@ const STORAGE_KEY = 'paz_ortega_companies_v1';
 const AUTH_KEY = 'paz_ortega_auth_session_v1';
 const CURRENT_COMPANY_KEY = 'paz_ortega_current_company_id_v1';
 
-const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname === 'localhost'
-  ? '/api/companies'
-  : 'https://paz-ortega-diagnostico-719167620987.us-central1.run.app/api/companies';
+// Frontend and backend are always served from the same Express instance (server.js
+// serves the API and the built static assets together), so calls stay same-origin.
+const API_ROOT = '/api';
 
-export const VALID_ACCESS_CODES = ['PAZ2026', 'ORTEGA_IA', 'CONSULTOR_PAZ', 'DEMO_PLANTA'];
+const API_BASE_URL = `${API_ROOT}/companies`;
 
-export function checkAccessCode(code: string): boolean {
-  return VALID_ACCESS_CODES.includes(code.trim().toUpperCase());
+export interface AuthSession {
+  code: string;
+  consultantName: string;
+  token: string;
 }
 
-export function getAuthSession(): { code: string; consultantName: string } | null {
+export function getAuthSession(): AuthSession | null {
   try {
     const raw = localStorage.getItem(AUTH_KEY);
-    return raw ? JSON.parse(raw) : null;
+    const session = raw ? JSON.parse(raw) : null;
+    return session?.token ? session : null;
   } catch {
     return null;
   }
 }
 
-export function saveAuthSession(code: string, consultantName: string): void {
-  localStorage.setItem(AUTH_KEY, JSON.stringify({ code, consultantName, timestamp: new Date().toISOString() }));
+export function saveAuthSession(session: AuthSession): void {
+  localStorage.setItem(AUTH_KEY, JSON.stringify({ ...session, timestamp: new Date().toISOString() }));
 }
 
 export function clearAuthSession(): void {
   localStorage.removeItem(AUTH_KEY);
+}
+
+function authHeaders(): HeadersInit {
+  const session = getAuthSession();
+  return session?.token ? { Authorization: `Bearer ${session.token}` } : {};
+}
+
+export async function loginConsultant(code: string, consultantName: string): Promise<AuthSession> {
+  const res = await fetch(`${API_ROOT}/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ code, consultantName }),
+  });
+  if (!res.ok) {
+    throw new Error('Código no válido.');
+  }
+  const data = await res.json();
+  return { code: data.code, consultantName: data.consultantName, token: data.token };
 }
 
 export function getCurrentCompanyId(): string | null {
@@ -51,6 +72,39 @@ export function getAllCompanies(): CompanyProfile[] {
   } catch (err) {
     console.error('Error loading companies from localStorage:', err);
     return [];
+  }
+}
+
+function mergeCompanyLists(remote: CompanyProfile[], local: CompanyProfile[]): CompanyProfile[] {
+  const byId = new Map<string, CompanyProfile>();
+  for (const item of local) byId.set(item.id, item);
+  for (const item of remote) {
+    const existing = byId.get(item.id);
+    if (!existing) {
+      byId.set(item.id, item);
+      continue;
+    }
+    const remoteTime = Date.parse(item.updatedAt || '') || 0;
+    const localTime = Date.parse(existing.updatedAt || '') || 0;
+    byId.set(item.id, remoteTime >= localTime ? item : existing);
+  }
+  return Array.from(byId.values()).sort((a, b) =>
+    (b.updatedAt || '').localeCompare(a.updatedAt || '')
+  );
+}
+
+export async function fetchRemoteCompanies(): Promise<CompanyProfile[]> {
+  try {
+    const res = await fetch(API_BASE_URL, { headers: authHeaders() });
+    if (res.status === 401) clearAuthSession();
+    if (!res.ok) return getAllCompanies();
+    const remote = (await res.json()) as CompanyProfile[];
+    const merged = mergeCompanyLists(Array.isArray(remote) ? remote : [], getAllCompanies());
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+    return merged;
+  } catch (err) {
+    console.warn('Backend fetch warning (offline mode):', err);
+    return getAllCompanies();
   }
 }
 
@@ -87,6 +141,7 @@ export function deleteCompany(id: string): void {
 
     fetch(`${API_BASE_URL}/${id}`, {
       method: 'DELETE',
+      headers: authHeaders(),
     }).catch((e) => console.warn('Backend delete sync warning:', e));
   } catch (err) {
     console.error('Error deleting company:', err);
@@ -110,6 +165,47 @@ export function exportCompanyRawJson(company: CompanyProfile): void {
   const blob = new Blob([jsonStr], { type: 'application/json;charset=utf-8' });
   const cleanName = company.name.replace(/[^a-zA-Z0-9]/g, '_');
   saveAs(blob, `Diagnostico_${cleanName}_DatosBrutos.json`);
+}
+
+export function exportConversationTranscript(company: CompanyProfile): void {
+  const messages = company.chatSession?.messages || [];
+  const lines = messages.map((m) => {
+    const who = m.sender === 'bot' ? 'Asistente' : 'Cliente';
+    return `[${m.timestamp || ''}] ${who}:\n${m.text || ''}`;
+  });
+  const header = `Conversación de diagnóstico\nEmpresa: ${company.name}\nContacto: ${company.chatSession?.contactName || ''} <${company.contactEmail || ''}>\nFecha: ${company.updatedAt || company.createdAt}\n\n`;
+  const blob = new Blob([header + lines.join('\n\n') + '\n'], { type: 'text/plain;charset=utf-8' });
+  const cleanName = (company.name || 'empresa').replace(/[^a-zA-Z0-9]/g, '_');
+  saveAs(blob, `Conversacion_${cleanName}.txt`);
+}
+
+export async function requestInstrumentChatTurn(payload: unknown): Promise<{
+  reply: string;
+  options?: string[];
+  mappedAnswers?: Array<{
+    questionId: string;
+    status?: 'V' | 'D' | 'E' | 'P';
+    notes?: string;
+    selectedOption?: string;
+  }>;
+  companyName?: string | null;
+  contactName?: string | null;
+  contactEmail?: string | null;
+  sector?: string | null;
+  readyToClose?: boolean;
+}> {
+  const res = await fetch(`${API_ROOT}/chat/turn`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    const err = new Error(data.error || 'ai_turn_failed') as Error & { status?: number };
+    err.status = res.status;
+    throw err;
+  }
+  return data;
 }
 
 export function exportCompanyRawCsv(company: CompanyProfile): void {

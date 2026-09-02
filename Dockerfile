@@ -18,11 +18,10 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 # Copy server and built static frontend
-COPY server.js ./
+COPY server.js dataStore.js ./
 COPY --from=build /app/dist ./dist
-
-# Create persistent data directory
 RUN mkdir -p ./data
+COPY data/instruments_catalog.json ./data/instruments_catalog.json
 
 EXPOSE 8080
 

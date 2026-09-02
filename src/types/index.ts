@@ -42,6 +42,59 @@ export interface InstrumentResponse {
   completed: boolean;
 }
 
+export interface ChatAttachment {
+  id: string;
+  name: string;
+  size: number;
+  type: 'image' | 'document';
+  mimeType: string;
+  dataUrl?: string;
+  url?: string;
+  uploadedAt: string;
+}
+
+export interface FinancialCostBreakdown {
+  directWasteMonthly?: string; // Mermas, productos no conformes, fallos directos
+  indirectHoursWeekly?: string; // Horas hombre perdidas a la semana en reprocesos/Excel
+  indirectCostMonthly?: string; // Coste monetario de esas horas
+  opportunityLossAnnual?: string; // Multas, descuentos forzados, clientes perdidos
+  totalMonthlyBleed?: string; // Fuga mensual estimada
+  totalAnnualBleed?: string; // Fuga anual estimada
+  clientObservations?: string;
+}
+
+export interface ChatMessage {
+  id: string;
+  sender: 'bot' | 'user';
+  text: string;
+  timestamp: string;
+  options?: string[]; // Botones de selección rápida
+  attachments?: ChatAttachment[];
+  isFinalConfirmation?: boolean;
+  stageId?: string;
+}
+
+export interface ChatSessionState {
+  currentStageIndex: number;
+  messages: ChatMessage[];
+  companyName: string;
+  contactName: string;
+  contactEmail: string;
+  contactPhone?: string;
+  sector: string;
+  employees: string;
+  costBreakdown: FinancialCostBreakdown;
+  attachments: ChatAttachment[];
+  isCompleted: boolean;
+  isSubmitted: boolean;
+  submittedAt?: string;
+  empresaId?: string;
+  conversacionId?: string;
+  instrumentAnswers?: Record<string, QuestionResponse>;
+  activeQuestionIds?: string[];
+  phase?: 'identity' | 'contact' | 'instrument' | 'done';
+}
+
 export interface CompanyProfile {
   id: string;
   name: string;
@@ -55,6 +108,11 @@ export interface CompanyProfile {
   createdAt: string;
   updatedAt: string;
   status: 'draft' | 'in_progress' | 'completed' | 'analyzed';
+  source?: 'in_plant_audit' | 'conversational_bot';
+  submittedByClient?: boolean;
+  chatSession?: ChatSessionState;
+  costBreakdown?: FinancialCostBreakdown;
+  attachments?: ChatAttachment[];
   instruments: Record<string, InstrumentResponse>;
   diagnosticResult?: DiagnosticResult;
 }

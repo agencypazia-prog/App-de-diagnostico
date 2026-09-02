@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CompanyProfile, DiagnosticResult } from './types';
 import {
+  AuthSession,
   getAuthSession,
   saveAuthSession,
   clearAuthSession,
@@ -11,6 +12,7 @@ import {
   getCurrentCompanyId,
   setCurrentCompanyId,
   saveDiagnosticResult,
+  fetchRemoteCompanies,
 } from './utils/storage';
 import { generateStrategicDiagnosis } from './services/aiDiagnosticService';
 import { Navbar } from './components/Navbar';
@@ -19,14 +21,18 @@ import { CompanyRegistrationModal } from './components/CompanyRegistrationModal'
 import { CompanyList } from './components/CompanyList';
 import { InstrumentCapture } from './components/InstrumentCapture';
 import { InfographicDashboard } from './components/InfographicDashboard';
+import { ConsultantChatReviewModal } from './components/ConsultantChatReviewModal';
 
 export function App() {
-  const [session, setSession] = useState<{ code: string; consultantName: string } | null>(null);
+  const [session, setSession] = useState<AuthSession | null>(null);
   const [companies, setCompanies] = useState<CompanyProfile[]>([]);
   const [currentCompany, setCurrentCompany] = useState<CompanyProfile | null>(null);
   const [activeView, setActiveView] = useState<'capture' | 'dashboard' | 'companies'>('companies');
   const [isNewCompanyModalOpen, setIsNewCompanyModalOpen] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+
+  // Modal for consultant to review client chat transcript & files
+  const [reviewingChatCompany, setReviewingChatCompany] = useState<CompanyProfile | null>(null);
 
   // Initialize session & companies on mount
   useEffect(() => {
@@ -34,6 +40,7 @@ export function App() {
     if (savedSession) {
       setSession(savedSession);
     }
+
     const all = getAllCompanies();
     setCompanies(all);
 
@@ -42,21 +49,28 @@ export function App() {
       const found = getCompanyById(currId);
       if (found) {
         setCurrentCompany(found);
-        setActiveView(found.diagnosticResult ? 'dashboard' : 'capture');
       }
+    }
+
+    if (savedSession) {
+      void fetchRemoteCompanies().then((remote) => {
+        setCompanies(remote);
+        const liveId = getCurrentCompanyId();
+        if (liveId) {
+          const found = remote.find((c) => c.id === liveId);
+          if (found) setCurrentCompany(found);
+        }
+      });
     }
   }, []);
 
-  const handleLoginSuccess = (code: string, consultantName: string) => {
-    saveAuthSession(code, consultantName);
-    setSession({ code, consultantName });
-    const all = getAllCompanies();
-    setCompanies(all);
-    if (all.length > 0) {
+  const handleLoginSuccess = (newSession: AuthSession) => {
+    saveAuthSession(newSession);
+    setSession(newSession);
+    void fetchRemoteCompanies().then((all) => {
+      setCompanies(all);
       setActiveView('companies');
-    } else {
-      setIsNewCompanyModalOpen(true);
-    }
+    });
   };
 
   const handleLogout = () => {
@@ -114,8 +128,13 @@ export function App() {
     }
   };
 
+  // If consultant is not logged in yet, show the consultant portal login
   if (!session) {
-    return <LoginModal onSuccess={handleLoginSuccess} />;
+    return (
+      <LoginModal
+        onSuccess={handleLoginSuccess}
+      />
+    );
   }
 
   return (
@@ -137,6 +156,7 @@ export function App() {
             onSelectCompany={handleSelectCompany}
             onNewCompany={() => setIsNewCompanyModalOpen(true)}
             onDeleteCompany={handleDeleteCompany}
+            onReviewChat={(comp) => setReviewingChatCompany(comp)}
           />
         )}
 
@@ -163,7 +183,7 @@ export function App() {
               Diagnóstico no generado aún
             </h3>
             <p className="text-xs text-[#4A4843]">
-              Debes registrar las respuestas de los instrumentos y presionar "Generar Diagnóstico" para ver el informe de IA.
+              Debes registrar las respuestas de los instrumentos o usar el Asistente IA para generar el informe.
             </p>
             <button
               onClick={() => setActiveView('capture')}
@@ -182,6 +202,19 @@ export function App() {
         consultantName={session.consultantName}
         accessCode={session.code}
       />
+
+      {/* Review Modal for Chatbot Submissions */}
+      {reviewingChatCompany && (
+        <ConsultantChatReviewModal
+          company={reviewingChatCompany}
+          isOpen={!!reviewingChatCompany}
+          onClose={() => setReviewingChatCompany(null)}
+          onDiagnosticUpdated={(updated) => {
+            handleUpdateCompany(updated);
+            setReviewingChatCompany(updated);
+          }}
+        />
+      )}
     </div>
   );
 }

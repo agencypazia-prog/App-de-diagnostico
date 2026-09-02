@@ -1,20 +1,16 @@
-import { InstrumentDefinition } from '../types';
-
-export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
+[
   {
-    "filename": "01 · Instrumento — Gerencia, administración y finanzas.docx",
-    "title": "Gerencia, administración y finanzas",
-    "subtitle": "Modelo de negocio, cadena de valor, sistemas, costos y prioridades estratégicas",
-    "role": "Analista de gerencia y finanzas",
-    "function": "Comprender dónde se crea valor, qué limita el crecimiento y qué resultados económicos debe producir cualquier inversión en IA.",
-    "sections": [
+    "id": "01",
+    "area": "Gerencia, administración y finanzas",
+    "proposito": "Comprender dónde se crea valor, qué limita el crecimiento y qué resultados económicos debe producir cualquier inversión en IA.",
+    "secciones": [
       {
-        "title": "A. Dirección y estrategia",
-        "questions": [
+        "titulo": "A. Dirección y estrategia",
+        "preguntas": [
           {
             "id": "G01",
-            "text": "¿Cuáles son los objetivos empresariales de los próximos 12–24 meses?",
-            "options": [
+            "texto": "¿Cuáles son los objetivos empresariales de los próximos 12–24 meses?",
+            "opciones": [
               "Crecimiento en ventas y expansión",
               "Reducción de costos y mermas",
               "Eficiencia operativa y digitalización",
@@ -23,8 +19,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G02",
-            "text": "¿Qué líneas, clientes, canales o presentaciones son estratégicas?",
-            "options": [
+            "texto": "¿Qué líneas, clientes, canales o presentaciones son estratégicas?",
+            "opciones": [
               "B2B Grandes superficies / Cadenas",
               "Distribuidores y canal tradicional",
               "Canal institucional / Horeca",
@@ -33,8 +29,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G03",
-            "text": "¿Cuáles son hoy los tres principales problemas de crecimiento, margen o servicio?",
-            "options": [
+            "texto": "¿Cuáles son hoy los tres principales problemas de crecimiento, margen o servicio?",
+            "opciones": [
               "Falta de capacidad o cuellos de botella en producción",
               "Mermas, reprocesos o costos fuera de control",
               "Retrasos o incumplimientos en entregas al cliente",
@@ -43,8 +39,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G04",
-            "text": "¿Qué decisiones dependen de gerencia por falta de información o delegación?",
-            "options": [
+            "texto": "¿Qué decisiones dependen de gerencia por falta de información o delegación?",
+            "opciones": [
               "Aprobación de precios, descuentos o condiciones comerciales",
               "Autorización de compras o inventarios",
               "Resolución de problemas de calidad o producción",
@@ -53,8 +49,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G05",
-            "text": "¿Cómo se aprueban actualmente inversiones en tecnología y qué periodo de recuperación esperan?",
-            "options": [
+            "texto": "¿Cómo se aprueban actualmente inversiones en tecnología y qué periodo de recuperación esperan?",
+            "opciones": [
               "Comité formal con caso de negocio y ROI exigido",
               "Decisión del gerente/dueño sin proceso formal",
               "Depende del flujo de caja disponible en el momento",
@@ -64,12 +60,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "B. Modelo de negocio y cadena de valor",
-        "questions": [
+        "titulo": "B. Modelo de negocio y cadena de valor",
+        "preguntas": [
           {
             "id": "G06",
-            "text": "¿Quiénes son los clientes principales y cómo llegan los pedidos?",
-            "options": [
+            "texto": "¿Quiénes son los clientes principales y cómo llegan los pedidos?",
+            "opciones": [
               "B2B Grandes superficies / Cadenas",
               "Distribuidores y canal tradicional",
               "Canal institucional / Horeca",
@@ -78,8 +74,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G07",
-            "text": "¿Cómo se planea demanda, compra, producción y despacho?",
-            "options": [
+            "texto": "¿Cómo se planea demanda, compra, producción y despacho?",
+            "opciones": [
               "Planeación formal con sistema (MRP/ERP)",
               "Planeación en Excel basada en experiencia",
               "Se reacciona a pedidos sin plan previo",
@@ -88,8 +84,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G08",
-            "text": "¿Dónde se producen retrasos, pérdidas, reprocesos o conflictos entre áreas?",
-            "options": [
+            "texto": "¿Dónde se producen retrasos, pérdidas, reprocesos o conflictos entre áreas?",
+            "opciones": [
               "Entre ventas y producción (pedidos no coordinados)",
               "En compras/abastecimiento (materia prima a tiempo)",
               "Dentro de planta (paradas, reprocesos, calidad)",
@@ -98,8 +94,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G09",
-            "text": "¿Qué actividades diferencian a la empresa frente a competidores?",
-            "options": [
+            "texto": "¿Qué actividades diferencian a la empresa frente a competidores?",
+            "opciones": [
               "Calidad o formulación del producto",
               "Servicio, tiempos de entrega o flexibilidad",
               "Precio o eficiencia en costos",
@@ -108,8 +104,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G10",
-            "text": "¿Qué proceso sería más crítico si se interrumpiera un día?",
-            "options": [
+            "texto": "¿Qué proceso sería más crítico si se interrumpiera un día?",
+            "opciones": [
               "Producción / línea de transformación",
               "Abastecimiento de materia prima",
               "Sistemas o información (ERP, facturación)",
@@ -119,12 +115,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "C. Administración y sistemas",
-        "questions": [
+        "titulo": "C. Administración y sistemas",
+        "preguntas": [
           {
             "id": "G11",
-            "text": "¿Qué ERP, software contable, hojas de cálculo, comercio electrónico o sistemas utilizan?",
-            "options": [
+            "texto": "¿Qué ERP, software contable, hojas de cálculo, comercio electrónico o sistemas utilizan?",
+            "opciones": [
               "ERP integral (SAP/Odoo/Oracle)",
               "Software contable local (Siigo/WorldOffice)",
               "Hojas de cálculo Excel dispersas",
@@ -133,8 +129,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G12",
-            "text": "¿Qué información se digita más de una vez o se transfiere manualmente?",
-            "options": [
+            "texto": "¿Qué información se digita más de una vez o se transfiere manualmente?",
+            "opciones": [
               "Datos de ventas hacia producción o inventario",
               "Datos de producción hacia contabilidad/costos",
               "Información de clientes o pedidos entre áreas",
@@ -143,8 +139,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G13",
-            "text": "¿Cómo se gestionan compras, proveedores, inventarios, pedidos, cartera y devoluciones?",
-            "options": [
+            "texto": "¿Cómo se gestionan compras, proveedores, inventarios, pedidos, cartera y devoluciones?",
+            "opciones": [
               "Con sistema integrado (ERP) y reglas claras",
               "Con hojas de cálculo y seguimiento manual",
               "De forma informal, según la experiencia de cada persona",
@@ -153,8 +149,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G14",
-            "text": "¿Qué reportes llegan tarde, requieren consolidación manual o generan dudas?",
-            "options": [
+            "texto": "¿Qué reportes llegan tarde, requieren consolidación manual o generan dudas?",
+            "opciones": [
               "Reportes financieros y de costos",
               "Reportes de producción y calidad",
               "Reportes comerciales y de cartera",
@@ -163,8 +159,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G15",
-            "text": "¿Qué datos existen por SKU, cliente, canal, lote, proveedor y periodo?",
-            "options": [
+            "texto": "¿Qué datos existen por SKU, cliente, canal, lote, proveedor y periodo?",
+            "opciones": [
               "Datos completos y confiables por todas esas dimensiones",
               "Datos parciales, dispersos en varios archivos",
               "Solo datos generales, sin desagregar",
@@ -174,12 +170,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "D. Costos y línea base financiera",
-        "questions": [
+        "titulo": "D. Costos y línea base financiera",
+        "preguntas": [
           {
             "id": "G16",
-            "text": "¿Cómo calculan costo unitario y rentabilidad por producto o presentación?",
-            "options": [
+            "texto": "¿Cómo calculan costo unitario y rentabilidad por producto o presentación?",
+            "opciones": [
               "Costeo estándar automatizado",
               "Costeo estimado por lote en Excel",
               "Costeo global sin desglose por SKU",
@@ -188,8 +184,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G17",
-            "text": "¿Qué costos generan merma, devolución, reproceso, parada o pedido incorrecto?",
-            "options": [
+            "texto": "¿Qué costos generan merma, devolución, reproceso, parada o pedido incorrecto?",
+            "opciones": [
               "Merma o desperdicio de materia prima",
               "Reprocesos por errores de calidad",
               "Paradas de máquina no planeadas",
@@ -198,8 +194,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G18",
-            "text": "¿Cuánto tiempo administrativo se dedica a conciliaciones, reportes y búsquedas?",
-            "options": [
+            "texto": "¿Cuánto tiempo administrativo se dedica a conciliaciones, reportes y búsquedas?",
+            "opciones": [
               "Menos de medio día a la semana",
               "Entre 1 y 2 días a la semana",
               "Más de 2 días a la semana",
@@ -208,8 +204,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G19",
-            "text": "¿Qué cifras históricas podrían compartirse por mes o trimestre?",
-            "options": [
+            "texto": "¿Qué cifras históricas podrían compartirse por mes o trimestre?",
+            "opciones": [
               "Ventas y costos por producto o línea",
               "Producción, merma y paradas",
               "Solo cifras contables generales",
@@ -218,8 +214,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G20",
-            "text": "¿Qué beneficios considerarían suficientes para autorizar un piloto?",
-            "options": [
+            "texto": "¿Qué beneficios considerarían suficientes para autorizar un piloto?",
+            "opciones": [
               "Ahorro o reducción de costos medible",
               "Recuperación de la inversión en menos de 12 meses",
               "Mejora de calidad o cumplimiento",
@@ -229,12 +225,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "E. Uso actual de IA y expectativas",
-        "questions": [
+        "titulo": "E. Uso actual de IA y expectativas",
+        "preguntas": [
           {
             "id": "G21",
-            "text": "¿Qué herramientas de IA, automatización o analítica usa formal o informalmente la organización?",
-            "options": [
+            "texto": "¿Qué herramientas de IA, automatización o analítica usa formal o informalmente la organización?",
+            "opciones": [
               "Uso informal libre (ChatGPT personal)",
               "Herramientas SaaS con IA integrada",
               "Pilotos aislados sin producción",
@@ -243,8 +239,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G22",
-            "text": "¿Quién las autorizó y qué información empresarial reciben?",
-            "options": [
+            "texto": "¿Quién las autorizó y qué información empresarial reciben?",
+            "opciones": [
               "Gerencia autorizó formalmente su uso",
               "Se usa sin autorización ni control formal",
               "Está prohibido o restringido",
@@ -253,8 +249,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G23",
-            "text": "¿Qué resultado esperan específicamente de visión artificial en embalaje o logística?",
-            "options": [
+            "texto": "¿Qué resultado esperan específicamente de visión artificial en embalaje o logística?",
+            "opciones": [
               "Detectar defectos o errores de empaque",
               "Contar y verificar unidades o pallets",
               "Reducir inspección manual",
@@ -263,8 +259,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G24",
-            "text": "¿Qué restricciones de presupuesto, integración, operación o confidencialidad existen?",
-            "options": [
+            "texto": "¿Qué restricciones de presupuesto, integración, operación o confidencialidad existen?",
+            "opciones": [
               "Presupuesto limitado o no definido",
               "Preocupación por integrar con sistemas actuales",
               "Confidencialidad de datos o imágenes de planta",
@@ -273,8 +269,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "G25",
-            "text": "¿Qué área y responsable podrían patrocinar un piloto de 60–90 días?",
-            "options": [
+            "texto": "¿Qué área y responsable podrían patrocinar un piloto de 60–90 días?",
+            "opciones": [
               "Gerencia general / dirección",
               "Producción u operaciones",
               "Calidad o aseguramiento",
@@ -283,30 +279,20 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           }
         ]
       }
-    ],
-    "rubricDimensions": [
-      "Estrategia y liderazgo",
-      "Gestión por indicadores",
-      "Integración administrativa",
-      "Calidad de información financiera",
-      "Preparación para invertir en IA"
-    ],
-    "id": "01"
+    ]
   },
   {
-    "filename": "02 · Instrumento — Recursos humanos y gestión del cambio.docx",
-    "title": "Recursos humanos y gestión del cambio",
-    "subtitle": "Roles, capacidades, conocimiento, seguridad laboral y adopción responsable de IA",
-    "role": "Analista de talento humano",
-    "function": "Identificar cómo las personas sostienen la operación, qué competencias faltan y qué controles laborales y de cambio requiere la adopción de IA.",
-    "sections": [
+    "id": "02",
+    "area": "Recursos humanos y gestión del cambio",
+    "proposito": "Identificar cómo las personas sostienen la operación, qué competencias faltan y qué controles laborales y de cambio requiere la adopción de IA.",
+    "secciones": [
       {
-        "title": "A. Organización y roles",
-        "questions": [
+        "titulo": "A. Organización y roles",
+        "preguntas": [
           {
             "id": "RH01",
-            "text": "¿Cómo está organizada la empresa y cuáles son los cargos críticos por área?",
-            "options": [
+            "texto": "¿Cómo está organizada la empresa y cuáles son los cargos críticos por área?",
+            "opciones": [
               "Organigrama formal y cargos bien definidos",
               "Roles claros pero sin organigrama documentado",
               "Roles se solapan o cambian según necesidad",
@@ -315,8 +301,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH02",
-            "text": "¿Qué funciones dependen excesivamente de una sola persona?",
-            "options": [
+            "texto": "¿Qué funciones dependen excesivamente de una sola persona?",
+            "opciones": [
               "Gerencia o dirección general",
               "Producción o supervisión de planta",
               "Administración, contabilidad o sistemas",
@@ -325,8 +311,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH03",
-            "text": "¿Dónde existen vacíos, duplicidad o falta de claridad de responsabilidades?",
-            "options": [
+            "texto": "¿Dónde existen vacíos, duplicidad o falta de claridad de responsabilidades?",
+            "opciones": [
               "Entre producción y calidad",
               "Entre ventas y administración",
               "En funciones de soporte (IT, mantenimiento)",
@@ -335,8 +321,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH04",
-            "text": "¿Cómo se cubren reemplazos, ausencias y cambios de turno?",
-            "options": [
+            "texto": "¿Cómo se cubren reemplazos, ausencias y cambios de turno?",
+            "opciones": [
               "Con personal entrenado en varias funciones",
               "Improvisando según quién esté disponible",
               "Con dificultad, hay puestos sin respaldo",
@@ -345,8 +331,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH05",
-            "text": "¿Qué responsables deberían participar en decisiones sobre IA?",
-            "options": [
+            "texto": "¿Qué responsables deberían participar en decisiones sobre IA?",
+            "opciones": [
               "Gerencia / dirección general",
               "Jefaturas de producción y calidad",
               "Sistemas o tecnología (si existe el rol)",
@@ -356,12 +342,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "B. Conocimiento y formación",
-        "questions": [
+        "titulo": "B. Conocimiento y formación",
+        "preguntas": [
           {
             "id": "RH06",
-            "text": "¿Cómo se documentan y enseñan procedimientos de trabajo?",
-            "options": [
+            "texto": "¿Cómo se documentan y enseñan procedimientos de trabajo?",
+            "opciones": [
               "Manuales o instructivos escritos y actualizados",
               "Documentos desactualizados o incompletos",
               "Se enseña de forma oral, persona a persona",
@@ -370,8 +356,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH07",
-            "text": "¿Cómo se realiza inducción y entrenamiento por puesto?",
-            "options": [
+            "texto": "¿Cómo se realiza inducción y entrenamiento por puesto?",
+            "opciones": [
               "Programa formal con contenidos definidos",
               "Acompañamiento informal de un compañero",
               "Aprende sobre la marcha, sin guía estructurada",
@@ -380,8 +366,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH08",
-            "text": "¿Qué errores se asocian a falta de formación o instrucciones desactualizadas?",
-            "options": [
+            "texto": "¿Qué errores se asocian a falta de formación o instrucciones desactualizadas?",
+            "opciones": [
               "Errores de calidad o formulación",
               "Errores administrativos o de registro",
               "Accidentes o incidentes de seguridad",
@@ -390,8 +376,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH09",
-            "text": "¿Qué conocimientos prácticos no están documentados?",
-            "options": [
+            "texto": "¿Qué conocimientos prácticos no están documentados?",
+            "opciones": [
               "Ajustes o “trucos” de máquina que solo sabe un operario",
               "Criterios de calidad que se deciden a ojo",
               "Relación con proveedores o clientes clave",
@@ -400,8 +386,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH10",
-            "text": "¿Qué nivel de alfabetización digital e IA tiene cada grupo de trabajadores?",
-            "options": [
+            "texto": "¿Qué nivel de alfabetización digital e IA tiene cada grupo de trabajadores?",
+            "opciones": [
               "Administrativos: cómodos con computador y software",
               "Planta/operativos: uso básico o nulo de tecnología",
               "Mixto, depende mucho de la persona",
@@ -411,12 +397,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "C. Gestión administrativa de personal",
-        "questions": [
+        "titulo": "C. Gestión administrativa de personal",
+        "preguntas": [
           {
             "id": "RH11",
-            "text": "¿Qué procesos de contratación, novedades, turnos, certificados o reportes son manuales?",
-            "options": [
+            "texto": "¿Qué procesos de contratación, novedades, turnos, certificados o reportes son manuales?",
+            "opciones": [
               "Contratación y documentación de personal",
               "Turnos, horarios y novedades de nómina",
               "Certificados y reportes para entidades externas",
@@ -425,8 +411,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH12",
-            "text": "¿Qué documentos se consultan repetidamente y cuánto tarda encontrarlos?",
-            "options": [
+            "texto": "¿Qué documentos se consultan repetidamente y cuánto tarda encontrarlos?",
+            "opciones": [
               "Se encuentran rápido, están organizados",
               "Toman varios minutos, están dispersos",
               "Toman horas o requieren pedirlos a alguien más",
@@ -435,8 +421,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH13",
-            "text": "¿Qué datos personales o sensibles se procesan y en qué sistemas?",
-            "options": [
+            "texto": "¿Qué datos personales o sensibles se procesan y en qué sistemas?",
+            "opciones": [
               "Datos de nómina y contratación en sistema/Excel",
               "Datos médicos o de seguridad y salud en el trabajo",
               "Imágenes de cámaras con personas identificables",
@@ -445,8 +431,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH14",
-            "text": "¿Qué indicadores se siguen sobre rotación, ausentismo, capacitación y productividad?",
-            "options": [
+            "texto": "¿Qué indicadores se siguen sobre rotación, ausentismo, capacitación y productividad?",
+            "opciones": [
               "Se miden y reportan formalmente",
               "Se llevan de forma informal, sin reporte",
               "Solo se nota cuando hay un problema grave",
@@ -455,8 +441,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH15",
-            "text": "¿Qué automatización administrativa tendría valor sin afectar decisiones humanas?",
-            "options": [
+            "texto": "¿Qué automatización administrativa tendría valor sin afectar decisiones humanas?",
+            "opciones": [
               "Generación automática de reportes o certificados",
               "Control de turnos, novedades o asistencia",
               "Alertas de vencimientos o documentación",
@@ -466,12 +452,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "D. Seguridad, vigilancia y cambio",
-        "questions": [
+        "titulo": "D. Seguridad, vigilancia y cambio",
+        "preguntas": [
           {
             "id": "RH16",
-            "text": "¿Qué cámaras existen y con qué finalidad se informaron a trabajadores?",
-            "options": [
+            "texto": "¿Qué cámaras existen y con qué finalidad se informaron a trabajadores?",
+            "opciones": [
               "Cámaras de seguridad, informadas al personal",
               "Cámaras de proceso/calidad, informadas al personal",
               "Existen cámaras pero no se ha informado formalmente",
@@ -480,8 +466,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH17",
-            "text": "¿Cómo se gestionan seguridad y salud en el trabajo y uso de EPP?",
-            "options": [
+            "texto": "¿Cómo se gestionan seguridad y salud en el trabajo y uso de EPP?",
+            "opciones": [
               "Sistema de gestión SST formal y auditado",
               "Reglas básicas de EPP sin sistema formal",
               "Se cumple de forma irregular",
@@ -490,8 +476,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH18",
-            "text": "¿Qué preocupación podrían tener los trabajadores frente a cámaras o IA?",
-            "options": [
+            "texto": "¿Qué preocupación podrían tener los trabajadores frente a cámaras o IA?",
+            "opciones": [
               "Temor a perder el empleo",
               "Sensación de vigilancia o desconfianza",
               "Uso indebido de su imagen o datos",
@@ -500,8 +486,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH19",
-            "text": "¿Cómo se comunicarían cambios de funciones y supervisión humana?",
-            "options": [
+            "texto": "¿Cómo se comunicarían cambios de funciones y supervisión humana?",
+            "opciones": [
               "Reunión formal explicando el cambio y su propósito",
               "Comunicación informal, según vaya surgiendo",
               "A través de los jefes directos de cada área",
@@ -510,8 +496,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "RH20",
-            "text": "¿Qué decisiones laborales deben mantenerse fuera de la automatización o requerir revisión humana?",
-            "options": [
+            "texto": "¿Qué decisiones laborales deben mantenerse fuera de la automatización o requerir revisión humana?",
+            "opciones": [
               "Contratación, despido o medidas disciplinarias",
               "Evaluación de desempeño",
               "Decisiones de seguridad y salud en el trabajo",
@@ -520,30 +506,20 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           }
         ]
       }
-    ],
-    "rubricDimensions": [
-      "Claridad de roles",
-      "Gestión del conocimiento",
-      "Competencias digitales",
-      "Protección de datos laborales",
-      "Preparación para el cambio"
-    ],
-    "id": "02"
+    ]
   },
   {
-    "filename": "03 · Instrumento — Producción y cadena de transformación.docx",
-    "title": "Producción y cadena de transformación",
-    "subtitle": "Recorrido de planta, capacidad, controles, calidad, trazabilidad y pérdidas",
-    "role": "Analista de procesos productivos",
-    "function": "Seguir físicamente el producto y documentar, estación por estación, dónde se transforma, controla, detiene, reprocesa o pierde valor.",
-    "sections": [
+    "id": "03",
+    "area": "Producción y cadena de transformación",
+    "proposito": "Seguir físicamente el producto y documentar, estación por estación, dónde se transforma, controla, detiene, reprocesa o pierde valor.",
+    "secciones": [
       {
-        "title": "A. Planeación y abastecimiento",
-        "questions": [
+        "titulo": "A. Planeación y abastecimiento",
+        "preguntas": [
           {
             "id": "P01",
-            "text": "¿Cómo se convierte la demanda en plan de producción y compra?",
-            "options": [
+            "texto": "¿Cómo se convierte la demanda en plan de producción y compra?",
+            "opciones": [
               "Con sistema formal (MRP/ERP) basado en pronóstico",
               "Con hoja de cálculo basada en pedidos confirmados",
               "Según experiencia y criterio del responsable",
@@ -552,8 +528,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P02",
-            "text": "¿Qué materias primas son críticas y cómo se homologan proveedores?",
-            "options": [
+            "texto": "¿Qué materias primas son críticas y cómo se homologan proveedores?",
+            "opciones": [
               "Insumos con pocos proveedores disponibles",
               "Insumos importados o de larga entrega",
               "Insumos perecederos o sensibles a calidad",
@@ -562,8 +538,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P03",
-            "text": "¿Qué problemas de disponibilidad, variabilidad o entrega afectan la producción?",
-            "options": [
+            "texto": "¿Qué problemas de disponibilidad, variabilidad o entrega afectan la producción?",
+            "opciones": [
               "Retrasos frecuentes de proveedores",
               "Variabilidad en calidad de la materia prima",
               "Faltantes que detienen la producción",
@@ -572,8 +548,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P04",
-            "text": "¿Cómo se inspecciona y registra la recepción?",
-            "options": [
+            "texto": "¿Cómo se inspecciona y registra la recepción?",
+            "opciones": [
               "Inspección formal con checklist y registro",
               "Revisión visual rápida sin registro formal",
               "Se confía en el proveedor, sin inspección",
@@ -582,8 +558,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P05",
-            "text": "¿Cómo se controlan lotes, vencimientos y rotación?",
-            "options": [
+            "texto": "¿Cómo se controlan lotes, vencimientos y rotación?",
+            "opciones": [
               "Sistema con trazabilidad de lote y FIFO/FEFO controlado",
               "Control manual en planillas o cuadernos",
               "Se controla de forma visual, sin registro",
@@ -593,12 +569,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "B. Preparación y formulación",
-        "questions": [
+        "titulo": "B. Preparación y formulación",
+        "preguntas": [
           {
             "id": "P06",
-            "text": "¿Cómo se emite y valida una orden de producción?",
-            "options": [
+            "texto": "¿Cómo se emite y valida una orden de producción?",
+            "opciones": [
               "Orden formal en sistema, con validación previa",
               "Orden escrita en papel o Excel",
               "Orden verbal según necesidad del turno",
@@ -607,8 +583,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P07",
-            "text": "¿Cómo se dosifican ingredientes y se previenen mezclas o referencias incorrectas?",
-            "options": [
+            "texto": "¿Cómo se dosifican ingredientes y se previenen mezclas o referencias incorrectas?",
+            "opciones": [
               "Dosificación automatizada o con báscula controlada",
               "Dosificación manual con receta escrita",
               "Dosificación manual según experiencia del operario",
@@ -617,8 +593,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P08",
-            "text": "¿Qué registros se generan por lote y quién los verifica?",
-            "options": [
+            "texto": "¿Qué registros se generan por lote y quién los verifica?",
+            "opciones": [
               "Registro completo verificado por calidad",
               "Registro parcial, verificación esporádica",
               "Se registra pero nadie lo revisa sistemáticamente",
@@ -627,8 +603,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P09",
-            "text": "¿Dónde ocurren esperas, traslados o búsquedas innecesarias?",
-            "options": [
+            "texto": "¿Dónde ocurren esperas, traslados o búsquedas innecesarias?",
+            "opciones": [
               "Esperas por materia prima o insumos",
               "Traslados largos entre estaciones",
               "Búsqueda de herramientas, formatos o información",
@@ -637,8 +613,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P10",
-            "text": "¿Qué error en esta etapa genera mayor costo o riesgo?",
-            "options": [
+            "texto": "¿Qué error en esta etapa genera mayor costo o riesgo?",
+            "opciones": [
               "Error de formulación o dosificación",
               "Contaminación cruzada o mezcla de referencias",
               "Retraso que detiene etapas siguientes",
@@ -648,12 +624,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "C. Transformación y equipos",
-        "questions": [
+        "titulo": "C. Transformación y equipos",
+        "preguntas": [
           {
             "id": "P11",
-            "text": "¿Cuáles son las estaciones, máquinas y secuencia real del proceso?",
-            "options": [
+            "texto": "¿Cuáles son las estaciones, máquinas y secuencia real del proceso?",
+            "opciones": [
               "Proceso lineal y estandarizado",
               "Proceso con variaciones según producto",
               "Proceso depende del criterio del operario",
@@ -662,8 +638,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P12",
-            "text": "¿Cuál es la capacidad nominal y real por hora o turno?",
-            "options": [
+            "texto": "¿Cuál es la capacidad nominal y real por hora o turno?",
+            "opciones": [
               "Se conoce con precisión (dato medido)",
               "Se estima aproximadamente",
               "Varía mucho y no se ha calculado",
@@ -672,8 +648,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P13",
-            "text": "¿Qué paradas ocurren, cuánto duran y cómo se registran?",
-            "options": [
+            "texto": "¿Qué paradas ocurren, cuánto duran y cómo se registran?",
+            "opciones": [
               "Se registran formalmente con causa y duración",
               "Se comentan verbalmente, sin registro",
               "Solo se notan las paradas largas",
@@ -682,8 +658,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P14",
-            "text": "¿Qué mantenimiento es preventivo, predictivo o reactivo?",
-            "options": [
+            "texto": "¿Qué mantenimiento es preventivo, predictivo o reactivo?",
+            "opciones": [
               "Preventivo programado con plan formal",
               "Predictivo con monitoreo de condición",
               "Reactivo, se repara cuando falla",
@@ -692,8 +668,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P15",
-            "text": "¿Qué variables de proceso se miden automáticamente y cuáles manualmente?",
-            "options": [
+            "texto": "¿Qué variables de proceso se miden automáticamente y cuáles manualmente?",
+            "opciones": [
               "La mayoría se mide automáticamente (sensores/PLC)",
               "Se mide manualmente con instrumentos",
               "Se estima a criterio del operario",
@@ -703,12 +679,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "D. Calidad, inocuidad y HACCP",
-        "questions": [
+        "titulo": "D. Calidad, inocuidad y HACCP",
+        "preguntas": [
           {
             "id": "P16",
-            "text": "¿Cuáles son los puntos críticos de control y cómo se documentan?",
-            "options": [
+            "texto": "¿Cuáles son los puntos críticos de control y cómo se documentan?",
+            "opciones": [
               "Plan HACCP formal y auditado",
               "Puntos de control identificados sin plan HACCP formal",
               "Control informal según experiencia",
@@ -717,8 +693,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P17",
-            "text": "¿Qué defectos o no conformidades son más frecuentes?",
-            "options": [
+            "texto": "¿Qué defectos o no conformidades son más frecuentes?",
+            "opciones": [
               "Defectos de peso, dosificación o formulación",
               "Defectos de empaque, sellado o etiquetado",
               "Contaminación o problemas microbiológicos",
@@ -727,8 +703,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P18",
-            "text": "¿Cómo se decide liberar, retener, reprocesar o descartar un lote?",
-            "options": [
+            "texto": "¿Cómo se decide liberar, retener, reprocesar o descartar un lote?",
+            "opciones": [
               "Criterio formal documentado con firma de calidad",
               "Decisión del jefe de planta según el caso",
               "Se decide de forma verbal, sin registro",
@@ -737,8 +713,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P19",
-            "text": "¿Qué trazabilidad existe desde materia prima hasta despacho?",
-            "options": [
+            "texto": "¿Qué trazabilidad existe desde materia prima hasta despacho?",
+            "opciones": [
               "Trazabilidad completa y verificable end-to-end",
               "Trazabilidad parcial, con vacíos en algunas etapas",
               "Trazabilidad manual, lenta de reconstruir",
@@ -747,8 +723,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P20",
-            "text": "¿Qué evidencias solicitan auditorías y cuánto tarda consolidarlas?",
-            "options": [
+            "texto": "¿Qué evidencias solicitan auditorías y cuánto tarda consolidarlas?",
+            "opciones": [
               "Se consolidan en horas, todo está organizado",
               "Se consolidan en días, requiere buscar en varias fuentes",
               "Toma semanas o genera estrés antes de auditorías",
@@ -758,12 +734,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "E. Rendimiento y pérdidas",
-        "questions": [
+        "titulo": "E. Rendimiento y pérdidas",
+        "preguntas": [
           {
             "id": "P21",
-            "text": "¿Qué volumen se produce por SKU, turno y periodo?",
-            "options": [
+            "texto": "¿Qué volumen se produce por SKU, turno y periodo?",
+            "opciones": [
               "Se conoce con precisión por SKU",
               "Se conoce a nivel general, no por SKU",
               "Se estima aproximadamente",
@@ -772,8 +748,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P22",
-            "text": "¿Cuál es la merma esperada y real?",
-            "options": [
+            "texto": "¿Cuál es la merma esperada y real?",
+            "opciones": [
               "Se mide y está dentro de lo esperado",
               "Se mide y supera lo esperado",
               "Se estima, sin medición precisa",
@@ -782,8 +758,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P23",
-            "text": "¿Cuánto producto se reprocesa y por qué causas?",
-            "options": [
+            "texto": "¿Cuánto producto se reprocesa y por qué causas?",
+            "opciones": [
               "Poco, causas conocidas y controladas",
               "Moderado, por errores de formulación o proceso",
               "Alto, por fallas recurrentes",
@@ -792,8 +768,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P24",
-            "text": "¿Qué cuello de botella limita la capacidad total?",
-            "options": [
+            "texto": "¿Qué cuello de botella limita la capacidad total?",
+            "opciones": [
               "Una máquina o estación específica",
               "Disponibilidad de materia prima",
               "Disponibilidad de personal capacitado",
@@ -802,8 +778,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "P25",
-            "text": "¿Qué pérdida podría reducirse con datos, alertas o detección temprana?",
-            "options": [
+            "texto": "¿Qué pérdida podría reducirse con datos, alertas o detección temprana?",
+            "opciones": [
               "Merma o desperdicio de materia prima",
               "Tiempo perdido por paradas no planeadas",
               "Reprocesos por defectos detectados tarde",
@@ -813,32 +789,32 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "F. Observación estación por estación",
-        "questions": [
+        "titulo": "F. Observación estación por estación",
+        "preguntas": [
           {
             "id": "P26",
-            "text": "Registrar entrada, salida, responsable y tiempo de ciclo de cada estación observada.",
-            "options": []
+            "texto": "Registrar entrada, salida, responsable y tiempo de ciclo de cada estación observada.",
+            "opciones": []
           },
           {
             "id": "P27",
-            "text": "Registrar control manual/automático y evidencia generada.",
-            "options": []
+            "texto": "Registrar control manual/automático y evidencia generada.",
+            "opciones": []
           },
           {
             "id": "P28",
-            "text": "Registrar defecto, frecuencia y consecuencia económica u operativa.",
-            "options": []
+            "texto": "Registrar defecto, frecuencia y consecuencia económica u operativa.",
+            "opciones": []
           },
           {
             "id": "P29",
-            "text": "Registrar decisión tomada ante la anomalía y tiempo hasta detectar el problema.",
-            "options": []
+            "texto": "Registrar decisión tomada ante la anomalía y tiempo hasta detectar el problema.",
+            "opciones": []
           },
           {
             "id": "P30",
-            "text": "Marcar si la oportunidad requiere automatización, analítica, agente, cámara, sensor u otra tecnología.",
-            "options": [
+            "texto": "Marcar si la oportunidad requiere automatización, analítica, agente, cámara, sensor u otra tecnología.",
+            "opciones": [
               "Automatización física (línea, dosificación, robot)",
               "Analítica de datos o reportes",
               "Agente o asistente de IA",
@@ -848,30 +824,20 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           }
         ]
       }
-    ],
-    "rubricDimensions": [
-      "Planificación de producción",
-      "Trazabilidad",
-      "Control de calidad",
-      "Medición de pérdidas",
-      "Automatización e integración"
-    ],
-    "id": "03"
+    ]
   },
   {
-    "filename": "04 · Instrumento — Embalaje, logística y visión artificial.docx",
-    "title": "Embalaje, logística y visión artificial",
-    "subtitle": "Factibilidad de cámaras, Ultralytics, sensores, integración y piloto",
-    "role": "Analista técnico de visión e integración",
-    "function": "Validar si un problema visible y medible puede resolverse con visión artificial y definir las condiciones de una prueba de concepto sin comprometer la operación.",
-    "sections": [
+    "id": "04",
+    "area": "Embalaje, logística y visión artificial",
+    "proposito": "Validar si un problema visible y medible puede resolverse con visión artificial y definir las condiciones de una prueba de concepto sin comprometer la operación.",
+    "secciones": [
       {
-        "title": "A. Embalaje y control visual",
-        "questions": [
+        "titulo": "A. Embalaje y control visual",
+        "preguntas": [
           {
             "id": "CV01",
-            "text": "¿Qué pasos componen envasado, sellado, etiquetado, encajado y paletizado?",
-            "options": [
+            "texto": "¿Qué pasos componen envasado, sellado, etiquetado, encajado y paletizado?",
+            "opciones": [
               "Proceso manual en su totalidad",
               "Proceso semi-automático (algunas máquinas)",
               "Proceso automatizado con supervisión mínima",
@@ -880,8 +846,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV02",
-            "text": "¿Qué presentaciones y variaciones debe distinguir el sistema?",
-            "options": [
+            "texto": "¿Qué presentaciones y variaciones debe distinguir el sistema?",
+            "opciones": [
               "Pocas presentaciones, bien diferenciadas",
               "Muchas presentaciones similares entre sí",
               "Presentaciones cambian con frecuencia (promociones, formatos)",
@@ -890,8 +856,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV03",
-            "text": "¿Qué defectos son visibles en una imagen y cuáles no?",
-            "options": [
+            "texto": "¿Qué defectos son visibles en una imagen y cuáles no?",
+            "opciones": [
               "Defectos visuales claros (etiqueta, sello, empaque roto)",
               "Defectos de conteo o posición (unidades, cajas)",
               "Defectos internos no visibles a simple vista",
@@ -900,8 +866,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV04",
-            "text": "¿Dónde se realiza inspección manual, con qué frecuencia y por quién?",
-            "options": [
+            "texto": "¿Dónde se realiza inspección manual, con qué frecuencia y por quién?",
+            "opciones": [
               "Inspección 100% de cada unidad por un operario",
               "Inspección por muestreo periódico",
               "Inspección solo cuando hay una queja o alerta",
@@ -910,8 +876,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV05",
-            "text": "¿Qué ocurre cuando se detecta un error y cuánto cuesta corregirlo tarde?",
-            "options": [
+            "texto": "¿Qué ocurre cuando se detecta un error y cuánto cuesta corregirlo tarde?",
+            "opciones": [
               "Se corrige en línea, costo bajo",
               "Genera reproceso o devolución interna",
               "Llega al cliente y genera reclamación",
@@ -921,12 +887,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "B. Flujo y logística",
-        "questions": [
+        "titulo": "B. Flujo y logística",
+        "preguntas": [
           {
             "id": "CV06",
-            "text": "¿Cómo se cuentan unidades, cajas y pallets?",
-            "options": [
+            "texto": "¿Cómo se cuentan unidades, cajas y pallets?",
+            "opciones": [
               "Conteo automático (sensor o sistema)",
               "Conteo manual con registro en formato",
               "Conteo manual sin registro sistemático",
@@ -935,8 +901,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV07",
-            "text": "¿Cómo se valida que SKU, lote y cantidad correspondan al pedido?",
-            "options": [
+            "texto": "¿Cómo se valida que SKU, lote y cantidad correspondan al pedido?",
+            "opciones": [
               "Validación con lector de código de barras/sistema",
               "Validación manual contra el pedido impreso",
               "Validación por experiencia del operario",
@@ -945,8 +911,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV08",
-            "text": "¿Qué errores de picking, consolidación, ruta o despacho ocurren?",
-            "options": [
+            "texto": "¿Qué errores de picking, consolidación, ruta o despacho ocurren?",
+            "opciones": [
               "Envío de SKU o cantidad incorrecta",
               "Errores de consolidación de pedidos",
               "Errores de ruta o destino de despacho",
@@ -955,8 +921,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV09",
-            "text": "¿Qué acumulaciones, esperas o recorridos afectan el flujo?",
-            "options": [
+            "texto": "¿Qué acumulaciones, esperas o recorridos afectan el flujo?",
+            "opciones": [
               "Acumulación de producto antes de empacar",
               "Esperas por disponibilidad de vehículo o muelle",
               "Recorridos largos entre bodega y despacho",
@@ -965,8 +931,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV10",
-            "text": "¿Qué devoluciones o reclamaciones podrían prevenirse con evidencia visual?",
-            "options": [
+            "texto": "¿Qué devoluciones o reclamaciones podrían prevenirse con evidencia visual?",
+            "opciones": [
               "Reclamos por producto dañado o mal empacado",
               "Reclamos por cantidad o referencia incorrecta",
               "Disputas sin evidencia de cómo salió el pedido",
@@ -976,12 +942,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "C. Condiciones de captura",
-        "questions": [
+        "titulo": "C. Condiciones de captura",
+        "preguntas": [
           {
             "id": "CV11",
-            "text": "¿Existen cámaras aprovechables? Registrar marca, resolución, FPS, ubicación y conectividad.",
-            "options": [
+            "texto": "¿Existen cámaras aprovechables? Registrar marca, resolución, FPS, ubicación y conectividad.",
+            "opciones": [
               "Sí, cámaras de seguridad existentes podrían reutilizarse",
               "Sí, ya hay cámaras de proceso/calidad instaladas",
               "No hay cámaras aprovechables, habría que instalar nuevas",
@@ -990,8 +956,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV12",
-            "text": "¿La iluminación es estable? Registrar sombras, reflejos, polvo, vibración y obstrucciones.",
-            "options": [
+            "texto": "¿La iluminación es estable? Registrar sombras, reflejos, polvo, vibración y obstrucciones.",
+            "opciones": [
               "Buena y estable, sin mayores problemas",
               "Variable, cambia según hora o clima",
               "Con polvo, vapor o vibración que podría afectar cámaras",
@@ -1000,8 +966,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV13",
-            "text": "¿Cuál es la velocidad de banda y cuántos objetos pasan por minuto?",
-            "options": [
+            "texto": "¿Cuál es la velocidad de banda y cuántos objetos pasan por minuto?",
+            "opciones": [
               "Menos de 20 unidades por minuto",
               "Entre 20 y 60 unidades por minuto",
               "Más de 60 unidades por minuto",
@@ -1010,8 +976,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV14",
-            "text": "¿Qué distancia, ángulo y campo de visión permitirían observar el defecto?",
-            "options": [
+            "texto": "¿Qué distancia, ángulo y campo de visión permitirían observar el defecto?",
+            "opciones": [
               "Se puede observar bien desde un punto fijo",
               "Requeriría más de un ángulo o cámara",
               "El defecto es difícil de aislar visualmente",
@@ -1020,8 +986,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV15",
-            "text": "¿Se permite capturar y almacenar video? ¿Durante cuánto tiempo?",
-            "options": [
+            "texto": "¿Se permite capturar y almacenar video? ¿Durante cuánto tiempo?",
+            "opciones": [
               "Sí, sin restricciones relevantes",
               "Sí, pero con restricciones de tiempo o acceso",
               "Habría que evaluarlo con legal o dirección",
@@ -1031,12 +997,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "D. Acción e integración",
-        "questions": [
+        "titulo": "D. Acción e integración",
+        "preguntas": [
           {
             "id": "CV16",
-            "text": "¿El sistema solo alerta, registra, desvía producto o detiene la línea?",
-            "options": [
+            "texto": "¿El sistema solo alerta, registra, desvía producto o detiene la línea?",
+            "opciones": [
               "Solo debe alertar a un operario",
               "Debe registrar evidencia sin intervenir",
               "Debe desviar el producto automáticamente",
@@ -1045,8 +1011,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV17",
-            "text": "¿Qué latencia máxima admite el proceso?",
-            "options": [
+            "texto": "¿Qué latencia máxima admite el proceso?",
+            "opciones": [
               "Puede tolerar unos segundos de retraso",
               "Debe ser prácticamente en tiempo real",
               "No es crítico, se revisa después",
@@ -1055,8 +1021,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV18",
-            "text": "¿Con qué PLC, ERP, WMS, tablero o sistema de calidad debe integrarse?",
-            "options": [
+            "texto": "¿Con qué PLC, ERP, WMS, tablero o sistema de calidad debe integrarse?",
+            "opciones": [
               "Debe integrarse con el ERP o WMS actual",
               "Debe integrarse con el PLC o línea automatizada",
               "Solo necesita un tablero o alerta independiente",
@@ -1065,8 +1031,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV19",
-            "text": "¿Quién confirma falsos positivos y autoriza cambios del modelo?",
-            "options": [
+            "texto": "¿Quién confirma falsos positivos y autoriza cambios del modelo?",
+            "opciones": [
               "Calidad / aseguramiento de calidad",
               "Jefe o supervisor de planta",
               "Un responsable técnico o de sistemas",
@@ -1075,8 +1041,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV20",
-            "text": "¿Debe operar sin internet y qué disponibilidad se exige?",
-            "options": [
+            "texto": "¿Debe operar sin internet y qué disponibilidad se exige?",
+            "opciones": [
               "Debe operar localmente, sin depender de internet",
               "Puede depender de conexión a internet estable",
               "Debe tener alta disponibilidad (24/7)",
@@ -1086,12 +1052,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "E. Datos, modelo y piloto",
-        "questions": [
+        "titulo": "E. Datos, modelo y piloto",
+        "preguntas": [
           {
             "id": "CV21",
-            "text": "¿Existen imágenes representativas de producto correcto y defectuoso?",
-            "options": [
+            "texto": "¿Existen imágenes representativas de producto correcto y defectuoso?",
+            "opciones": [
               "Sí, hay registros fotográficos disponibles",
               "Hay algunas imágenes, pero dispersas o incompletas",
               "No hay imágenes, habría que capturarlas",
@@ -1100,8 +1066,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV22",
-            "text": "¿Quién puede etiquetar ejemplos y validar las clases de defecto?",
-            "options": [
+            "texto": "¿Quién puede etiquetar ejemplos y validar las clases de defecto?",
+            "opciones": [
               "Personal de calidad con criterio técnico claro",
               "Supervisores de planta con experiencia",
               "No hay una persona clara para esta tarea",
@@ -1110,8 +1076,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV23",
-            "text": "¿Qué precisión, recall y tasa de falsos positivos serían aceptables?",
-            "options": [
+            "texto": "¿Qué precisión, recall y tasa de falsos positivos serían aceptables?",
+            "opciones": [
               "Prioriza no dejar pasar defectos (alto recall)",
               "Prioriza evitar falsas alarmas (alta precisión)",
               "Necesita equilibrio entre ambos",
@@ -1120,8 +1086,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV24",
-            "text": "¿Qué estación y defecto ofrecen la mejor prueba de concepto?",
-            "options": [
+            "texto": "¿Qué estación y defecto ofrecen la mejor prueba de concepto?",
+            "opciones": [
               "Un defecto visual claro y frecuente",
               "Un punto de conteo o verificación de cantidad",
               "Un punto crítico de calidad o inocuidad",
@@ -1130,8 +1096,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "CV25",
-            "text": "¿Qué cámaras, cómputo, licencia, integración y soporte debe incluir el costo total?",
-            "options": [
+            "texto": "¿Qué cámaras, cómputo, licencia, integración y soporte debe incluir el costo total?",
+            "opciones": [
               "Presupuesto ya estimado o aprobado",
               "Se necesita cotización antes de decidir",
               "Depende del resultado de la prueba de concepto",
@@ -1140,30 +1106,20 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           }
         ]
       }
-    ],
-    "rubricDimensions": [
-      "Visibilidad del problema",
-      "Calidad de captura",
-      "Datos de entrenamiento",
-      "Integración",
-      "Viabilidad de piloto"
-    ],
-    "id": "04"
+    ]
   },
   {
-    "filename": "05 · Instrumento — Gobernanza, datos, riesgos y cumplimiento.docx",
-    "title": "Gobernanza, datos, riesgos y cumplimiento",
-    "subtitle": "Preparación organizacional para implementar y supervisar sistemas de IA",
-    "role": "Evidencias que debe solicitar o registrar",
-    "function": "Determinar qué responsabilidades, controles, evidencias y reglas necesita la empresa para adoptar IA dentro de su Sistema de Gestión Integrado y sus prácticas de calidad.",
-    "sections": [
+    "id": "05",
+    "area": "Gobernanza, datos, riesgos y cumplimiento",
+    "proposito": "Determinar qué responsabilidades, controles, evidencias y reglas necesita la empresa para adoptar IA dentro de su Sistema de Gestión Integrado y sus prácticas de calidad.",
+    "secciones": [
       {
-        "title": "A. Liderazgo y alcance",
-        "questions": [
+        "titulo": "A. Liderazgo y alcance",
+        "preguntas": [
           {
             "id": "GO01",
-            "text": "¿Quién aprueba, patrocina, usa y supervisa tecnologías de IA?",
-            "options": [
+            "texto": "¿Quién aprueba, patrocina, usa y supervisa tecnologías de IA?",
+            "opciones": [
               "Gerencia general / dirección",
               "Un comité o líder de tecnología",
               "Cada área decide por su cuenta",
@@ -1172,8 +1128,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO02",
-            "text": "¿Existe política o regla interna sobre uso de IA generativa, automatización o cámaras?",
-            "options": [
+            "texto": "¿Existe política o regla interna sobre uso de IA generativa, automatización o cámaras?",
+            "opciones": [
               "Sí, existe una política formal",
               "Hay reglas informales, no documentadas",
               "No existe ninguna política",
@@ -1182,8 +1138,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO03",
-            "text": "¿Qué procesos y sistemas quedarían inicialmente dentro del alcance?",
-            "options": [
+            "texto": "¿Qué procesos y sistemas quedarían inicialmente dentro del alcance?",
+            "opciones": [
               "Un proceso operativo específico (piloto acotado)",
               "Un área completa (ej. calidad, producción)",
               "Sistemas administrativos o de gestión",
@@ -1192,8 +1148,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO04",
-            "text": "¿Qué objetivos medibles espera la alta dirección?",
-            "options": [
+            "texto": "¿Qué objetivos medibles espera la alta dirección?",
+            "opciones": [
               "Reducción de costos o mermas",
               "Mejora de calidad o cumplimiento",
               "Aumento de capacidad o eficiencia",
@@ -1203,12 +1159,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "B. Inventario y ciclo de vida",
-        "questions": [
+        "titulo": "B. Inventario y ciclo de vida",
+        "preguntas": [
           {
             "id": "GO05",
-            "text": "¿Qué sistemas con IA o decisiones automatizadas existen actualmente?",
-            "options": [
+            "texto": "¿Qué sistemas con IA o decisiones automatizadas existen actualmente?",
+            "opciones": [
               "Ninguno, sería la primera iniciativa",
               "Herramientas de oficina con IA (ChatGPT, Copilot)",
               "Algún sistema con reglas automatizadas (no IA)",
@@ -1217,8 +1173,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO06",
-            "text": "¿Quién es propietario de cada sistema y qué proveedor participa?",
-            "options": [
+            "texto": "¿Quién es propietario de cada sistema y qué proveedor participa?",
+            "opciones": [
               "Está claramente identificado por sistema",
               "Es informal, depende de quién lo implementó",
               "No aplica todavía, no hay sistemas de IA",
@@ -1227,8 +1183,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO07",
-            "text": "¿Cómo se prueban, aprueban, cambian y retiran sistemas tecnológicos?",
-            "options": [
+            "texto": "¿Cómo se prueban, aprueban, cambian y retiran sistemas tecnológicos?",
+            "opciones": [
               "Proceso formal de pruebas y aprobación",
               "Se prueba de forma informal antes de usar",
               "Se implementa directamente, sin proceso previo",
@@ -1237,8 +1193,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO08",
-            "text": "¿Qué registros permiten reconstruir una decisión o incidente?",
-            "options": [
+            "texto": "¿Qué registros permiten reconstruir una decisión o incidente?",
+            "opciones": [
               "Registros completos y trazables",
               "Registros parciales o dispersos",
               "Depende de la memoria de las personas involucradas",
@@ -1248,12 +1204,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "C. Datos y privacidad",
-        "questions": [
+        "titulo": "C. Datos y privacidad",
+        "preguntas": [
           {
             "id": "GO09",
-            "text": "¿Qué datos de clientes, trabajadores, proveedores, producción e imágenes se usarían?",
-            "options": [
+            "texto": "¿Qué datos de clientes, trabajadores, proveedores, producción e imágenes se usarían?",
+            "opciones": [
               "Datos de producción y calidad",
               "Datos de clientes o pedidos",
               "Datos o imágenes de trabajadores en planta",
@@ -1262,8 +1218,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO10",
-            "text": "¿Cuál es la finalidad, base de autorización, acceso, conservación y eliminación?",
-            "options": [
+            "texto": "¿Cuál es la finalidad, base de autorización, acceso, conservación y eliminación?",
+            "opciones": [
               "Está claramente definido y documentado",
               "Existe una idea general, sin documentar",
               "No se ha definido",
@@ -1272,8 +1228,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO11",
-            "text": "¿Cómo se controla calidad, exactitud, trazabilidad y minimización de datos?",
-            "options": [
+            "texto": "¿Cómo se controla calidad, exactitud, trazabilidad y minimización de datos?",
+            "opciones": [
               "Con controles formales de calidad de datos",
               "De forma informal, sin control sistemático",
               "No se controla actualmente",
@@ -1282,8 +1238,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO12",
-            "text": "¿Qué datos o imágenes no deben salir de la planta?",
-            "options": [
+            "texto": "¿Qué datos o imágenes no deben salir de la planta?",
+            "opciones": [
               "Fórmulas, recetas o procesos propios",
               "Imágenes o video de la operación",
               "Datos de clientes o comerciales",
@@ -1293,12 +1249,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "D. Riesgo y supervisión humana",
-        "questions": [
+        "titulo": "D. Riesgo y supervisión humana",
+        "preguntas": [
           {
             "id": "GO13",
-            "text": "¿Qué daño podría causar un falso positivo, falso negativo o indisponibilidad?",
-            "options": [
+            "texto": "¿Qué daño podría causar un falso positivo, falso negativo o indisponibilidad?",
+            "opciones": [
               "Pérdida de producto o parada de línea",
               "Producto defectuoso llega al cliente",
               "Pérdida de confianza del equipo en el sistema",
@@ -1307,8 +1263,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO14",
-            "text": "¿Qué decisiones requieren confirmación humana?",
-            "options": [
+            "texto": "¿Qué decisiones requieren confirmación humana?",
+            "opciones": [
               "Rechazo o liberación de un lote",
               "Detener una línea de producción",
               "Cualquier decisión con impacto en clientes",
@@ -1317,8 +1273,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO15",
-            "text": "¿Quién puede detener el sistema o volver al proceso manual?",
-            "options": [
+            "texto": "¿Quién puede detener el sistema o volver al proceso manual?",
+            "opciones": [
               "El operario en la estación",
               "El supervisor o jefe de turno",
               "Solo un responsable técnico autorizado",
@@ -1327,8 +1283,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO16",
-            "text": "¿Cómo se reportan, investigan y corrigen incidentes?",
-            "options": [
+            "texto": "¿Cómo se reportan, investigan y corrigen incidentes?",
+            "opciones": [
               "Proceso formal de investigación y acción correctiva",
               "Se reporta verbalmente, sin proceso formal",
               "Solo se atienden incidentes graves",
@@ -1338,12 +1294,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "E. Proveedores, seguridad y licencias",
-        "questions": [
+        "titulo": "E. Proveedores, seguridad y licencias",
+        "preguntas": [
           {
             "id": "GO17",
-            "text": "¿Cómo se evalúan proveedores, contratos, SLA y subencargados?",
-            "options": [
+            "texto": "¿Cómo se evalúan proveedores, contratos, SLA y subencargados?",
+            "opciones": [
               "Con criterios formales de evaluación",
               "De forma informal, según referencias o experiencia",
               "No se evalúa a proveedores tecnológicos",
@@ -1352,8 +1308,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO18",
-            "text": "¿Cómo se gestionan accesos, respaldos, continuidad y ciberseguridad?",
-            "options": [
+            "texto": "¿Cómo se gestionan accesos, respaldos, continuidad y ciberseguridad?",
+            "opciones": [
               "Con políticas formales de seguridad de la información",
               "Con medidas básicas, sin política formal",
               "Prácticamente no hay controles de seguridad",
@@ -1362,8 +1318,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO19",
-            "text": "¿Qué licencias, propiedad intelectual y restricciones de uso aplican?",
-            "options": [
+            "texto": "¿Qué licencias, propiedad intelectual y restricciones de uso aplican?",
+            "opciones": [
               "Ya se ha revisado con asesoría legal",
               "Existe una preocupación pero sin revisión formal",
               "No se ha considerado este aspecto",
@@ -1372,8 +1328,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO20",
-            "text": "¿Qué evidencia debe conservarse para auditorías, HACCP y responsabilidad demostrada?",
-            "options": [
+            "texto": "¿Qué evidencia debe conservarse para auditorías, HACCP y responsabilidad demostrada?",
+            "opciones": [
               "Registros de producción y calidad por lote",
               "Registros de decisiones automatizadas o alertas",
               "Evidencia para certificaciones externas (HACCP, ISO)",
@@ -1383,12 +1339,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "F. Personas, medición y mejora",
-        "questions": [
+        "titulo": "F. Personas, medición y mejora",
+        "preguntas": [
           {
             "id": "GO21",
-            "text": "¿Qué competencias necesita cada rol y quién debe capacitarse?",
-            "options": [
+            "texto": "¿Qué competencias necesita cada rol y quién debe capacitarse?",
+            "opciones": [
               "Operarios de planta",
               "Supervisores y jefes de área",
               "Equipo de calidad o aseguramiento",
@@ -1397,8 +1353,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO22",
-            "text": "¿Qué indicadores técnicos, operativos, financieros y de riesgo se revisarán?",
-            "options": [
+            "texto": "¿Qué indicadores técnicos, operativos, financieros y de riesgo se revisarán?",
+            "opciones": [
               "Indicadores de desempeño del sistema (precisión, uso)",
               "Indicadores operativos (mermas, paradas, calidad)",
               "Indicadores financieros (ahorro, ROI)",
@@ -1407,8 +1363,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO23",
-            "text": "¿Con qué frecuencia se evaluarán modelo, datos, controles y proveedor?",
-            "options": [
+            "texto": "¿Con qué frecuencia se evaluarán modelo, datos, controles y proveedor?",
+            "opciones": [
               "Mensualmente",
               "Trimestralmente",
               "Solo cuando surja un problema",
@@ -1417,8 +1373,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "GO24",
-            "text": "¿Cómo se comunicarán resultados, límites y cambios a trabajadores y directivos?",
-            "options": [
+            "texto": "¿Cómo se comunicarán resultados, límites y cambios a trabajadores y directivos?",
+            "opciones": [
               "Reuniones periódicas formales",
               "Comunicados o boletines internos",
               "De manera informal, según se requiera",
@@ -1427,31 +1383,20 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           }
         ]
       }
-    ],
-    "rubricDimensions": [
-      "Liderazgo y responsabilidad",
-      "Inventario y ciclo de vida",
-      "Datos y privacidad",
-      "Riesgo y supervisión",
-      "Proveedores y seguridad",
-      "Medición y mejora"
-    ],
-    "id": "05"
+    ]
   },
   {
-    "filename": "06 · Instrumento — ROI, priorización y cierre comercial.docx",
-    "title": "ROI, priorización y cierre comercial",
-    "subtitle": "Línea base, escenarios, indicadores, caso de negocio y siguiente fase",
-    "role": "Analista financiero y coordinador comercial",
-    "function": "Traducir cada problema priorizado a una línea base medible, un beneficio potencial, un costo total y una decisión comercial responsable.",
-    "sections": [
+    "id": "06",
+    "area": "ROI, priorización y cierre comercial",
+    "proposito": "Traducir cada problema priorizado a una línea base medible, un beneficio potencial, un costo total y una decisión comercial responsable.",
+    "secciones": [
       {
-        "title": "A. Línea base del problema",
-        "questions": [
+        "titulo": "A. Línea base del problema",
+        "preguntas": [
           {
             "id": "R01",
-            "text": "¿Cuál es el proceso, estación y problema específico?",
-            "options": [
+            "texto": "¿Cuál es el proceso, estación y problema específico?",
+            "opciones": [
               "Un problema de calidad o defectos",
               "Un problema de eficiencia o capacidad",
               "Un problema de costos o mermas",
@@ -1460,8 +1405,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R02",
-            "text": "¿Con qué frecuencia ocurre y cómo se registra?",
-            "options": [
+            "texto": "¿Con qué frecuencia ocurre y cómo se registra?",
+            "opciones": [
               "Ocurre a diario",
               "Ocurre varias veces por semana",
               "Ocurre ocasionalmente",
@@ -1470,8 +1415,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R03",
-            "text": "¿Qué volumen de unidades, lotes, pedidos u horas está expuesto?",
-            "options": [
+            "texto": "¿Qué volumen de unidades, lotes, pedidos u horas está expuesto?",
+            "opciones": [
               "Se conoce el volumen con precisión",
               "Se estima aproximadamente",
               "Es difícil de cuantificar hoy",
@@ -1480,8 +1425,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R04",
-            "text": "¿Cuál es el costo unitario del error, merma, reproceso, devolución o parada?",
-            "options": [
+            "texto": "¿Cuál es el costo unitario del error, merma, reproceso, devolución o parada?",
+            "opciones": [
               "Se conoce el costo con precisión",
               "Se puede estimar con la información disponible",
               "Sería difícil de calcular sin apoyo",
@@ -1490,8 +1435,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R05",
-            "text": "¿Qué indicador actual demuestra el problema?",
-            "options": [
+            "texto": "¿Qué indicador actual demuestra el problema?",
+            "opciones": [
               "Un indicador ya medido y reportado",
               "Un dato que existe pero no se reporta formalmente",
               "Evidencia cualitativa (quejas, percepción del equipo)",
@@ -1501,12 +1446,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "B. Beneficios potenciales",
-        "questions": [
+        "titulo": "B. Beneficios potenciales",
+        "preguntas": [
           {
             "id": "R06",
-            "text": "¿Qué cantidad de defectos, horas o pérdidas sería razonable reducir?",
-            "options": [
+            "texto": "¿Qué cantidad de defectos, horas o pérdidas sería razonable reducir?",
+            "opciones": [
               "Reducción menor al 20%",
               "Reducción entre 20% y 50%",
               "Reducción mayor al 50%",
@@ -1515,8 +1460,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R07",
-            "text": "¿El beneficio proviene de ahorro, capacidad adicional, calidad, ventas o riesgo evitado?",
-            "options": [
+            "texto": "¿El beneficio proviene de ahorro, capacidad adicional, calidad, ventas o riesgo evitado?",
+            "opciones": [
               "Ahorro de costos directos",
               "Capacidad adicional o mayor producción",
               "Mejora de calidad o cumplimiento",
@@ -1525,8 +1470,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R08",
-            "text": "¿Qué parte del beneficio puede atribuirse directamente a la solución?",
-            "options": [
+            "texto": "¿Qué parte del beneficio puede atribuirse directamente a la solución?",
+            "opciones": [
               "La mayor parte es atribuible directamente",
               "Una parte, hay otros factores que también influyen",
               "Es difícil de aislar el efecto",
@@ -1535,8 +1480,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R09",
-            "text": "¿Qué beneficio es cuantificable y cuál es cualitativo?",
-            "options": [
+            "texto": "¿Qué beneficio es cuantificable y cuál es cualitativo?",
+            "opciones": [
               "Principalmente cuantificable (cifras claras)",
               "Mezcla de beneficios cuantificables y cualitativos",
               "Principalmente cualitativo (difícil de medir)",
@@ -1545,8 +1490,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R10",
-            "text": "¿Quién validará mensualmente el beneficio realizado?",
-            "options": [
+            "texto": "¿Quién validará mensualmente el beneficio realizado?",
+            "opciones": [
               "Gerencia o dirección financiera",
               "El jefe de producción o calidad",
               "Un responsable del proyecto/piloto",
@@ -1556,12 +1501,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "C. Costo total de propiedad",
-        "questions": [
+        "titulo": "C. Costo total de propiedad",
+        "preguntas": [
           {
             "id": "R11",
-            "text": "¿Qué hardware, cámaras, sensores o infraestructura se requieren?",
-            "options": [
+            "texto": "¿Qué hardware, cámaras, sensores o infraestructura se requieren?",
+            "opciones": [
               "Ya identificado con cotización preliminar",
               "Se tiene una idea general, sin cotizar",
               "Se necesitaría un diagnóstico técnico primero",
@@ -1570,8 +1515,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R12",
-            "text": "¿Qué costos de software, licencia, nube, integración o conectividad aplican?",
-            "options": [
+            "texto": "¿Qué costos de software, licencia, nube, integración o conectividad aplican?",
+            "opciones": [
               "Ya identificados con cotización preliminar",
               "Se tiene una idea general, sin cotizar",
               "Depende del proveedor que se elija",
@@ -1580,8 +1525,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R13",
-            "text": "¿Qué costos de dataset, etiquetado, entrenamiento y pruebas deben incluirse?",
-            "options": [
+            "texto": "¿Qué costos de dataset, etiquetado, entrenamiento y pruebas deben incluirse?",
+            "opciones": [
               "Ya considerados en el presupuesto",
               "No se habían considerado hasta ahora",
               "Se esperaría que el proveedor los incluya",
@@ -1590,8 +1535,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R14",
-            "text": "¿Qué capacitación, soporte, monitoreo y reentrenamiento serán recurrentes?",
-            "options": [
+            "texto": "¿Qué capacitación, soporte, monitoreo y reentrenamiento serán recurrentes?",
+            "opciones": [
               "Ya se contempla como costo recurrente",
               "No se había considerado como costo aparte",
               "Se esperaría que esté incluido en el contrato",
@@ -1600,8 +1545,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R15",
-            "text": "¿Qué costo interno tendrá el tiempo del personal de la empresa?",
-            "options": [
+            "texto": "¿Qué costo interno tendrá el tiempo del personal de la empresa?",
+            "opciones": [
               "Se puede estimar con base en horas dedicadas",
               "Sería un costo bajo, poco tiempo requerido",
               "Podría ser significativo, hay poco tiempo disponible",
@@ -1611,27 +1556,27 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "D. Escenarios y decisión",
-        "questions": [
+        "titulo": "D. Escenarios y decisión",
+        "preguntas": [
           {
             "id": "R16",
-            "text": "Definir escenario conservador: mejora mínima y costos completos.",
-            "options": []
+            "texto": "Definir escenario conservador: mejora mínima y costos completos.",
+            "opciones": []
           },
           {
             "id": "R17",
-            "text": "Definir escenario esperado: mejora probable respaldada por el piloto.",
-            "options": []
+            "texto": "Definir escenario esperado: mejora probable respaldada por el piloto.",
+            "opciones": []
           },
           {
             "id": "R18",
-            "text": "Definir escenario optimista sin usarlo como promesa comercial.",
-            "options": []
+            "texto": "Definir escenario optimista sin usarlo como promesa comercial.",
+            "opciones": []
           },
           {
             "id": "R19",
-            "text": "¿Cuál es el ROI mínimo y plazo máximo de recuperación aceptable?",
-            "options": [
+            "texto": "¿Cuál es el ROI mínimo y plazo máximo de recuperación aceptable?",
+            "opciones": [
               "Menos de 6 meses",
               "Entre 6 y 12 meses",
               "Entre 12 y 24 meses",
@@ -1640,8 +1585,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R20",
-            "text": "¿Qué condición detendría o impediría escalar el piloto?",
-            "options": [
+            "texto": "¿Qué condición detendría o impediría escalar el piloto?",
+            "opciones": [
               "Que no se cumpla el ROI esperado",
               "Que afecte la calidad o la operación",
               "Que el equipo no lo adopte bien",
@@ -1651,12 +1596,12 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
         ]
       },
       {
-        "title": "E. Priorización comercial",
-        "questions": [
+        "titulo": "E. Priorización comercial",
+        "preguntas": [
           {
             "id": "R21",
-            "text": "¿Cuál oportunidad combina mayor impacto, datos disponibles y menor riesgo?",
-            "options": [
+            "texto": "¿Cuál oportunidad combina mayor impacto, datos disponibles y menor riesgo?",
+            "opciones": [
               "Ya hay una oportunidad clara identificada",
               "Hay varias opciones, falta priorizar",
               "Depende de un análisis más profundo",
@@ -1665,8 +1610,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R22",
-            "text": "¿Qué puede probarse en una estación y en 60–90 días?",
-            "options": [
+            "texto": "¿Qué puede probarse en una estación y en 60–90 días?",
+            "opciones": [
               "Sí, hay un alcance acotado y viable",
               "Es posible, pero requeriría ajustes",
               "Sería difícil en ese plazo",
@@ -1675,8 +1620,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R23",
-            "text": "¿Qué iniciativa requiere primero mejorar datos o procesos?",
-            "options": [
+            "texto": "¿Qué iniciativa requiere primero mejorar datos o procesos?",
+            "opciones": [
               "Los datos ya están listos para empezar",
               "Se requiere ordenar datos antes de avanzar",
               "Se requiere primero estandarizar el proceso",
@@ -1685,8 +1630,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R24",
-            "text": "¿Qué servicios complementarios se necesitan: automatización, agente, LegalTech o gobernanza?",
-            "options": [
+            "texto": "¿Qué servicios complementarios se necesitan: automatización, agente, LegalTech o gobernanza?",
+            "opciones": [
               "Automatización de procesos",
               "Agente o asistente de IA",
               "Acompañamiento legal / cumplimiento (LegalTech)",
@@ -1695,8 +1640,8 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           },
           {
             "id": "R25",
-            "text": "¿Quién decide, quién financia y cuál es el siguiente hito?",
-            "options": [
+            "texto": "¿Quién decide, quién financia y cuál es el siguiente hito?",
+            "opciones": [
               "Ya está definido quién decide y financia",
               "Se sabe quién decide, falta definir financiamiento",
               "Aún debe discutirse internamente",
@@ -1705,15 +1650,6 @@ export const INSTRUMENTS_DATA: InstrumentDefinition[] = [
           }
         ]
       }
-    ],
-    "rubricDimensions": [
-      "Impacto económico",
-      "Factibilidad",
-      "Disponibilidad de datos",
-      "Tiempo a valor",
-      "Riesgo",
-      "Patrocinio interno"
-    ],
-    "id": "06"
+    ]
   }
-];
+]
