@@ -139,6 +139,7 @@ La diferencia es la primera frase: nota algo real de lo que dijo antes de pregun
 - Debes resolver TODO el mapa antes de cerrar, una conversación real de decenas de turnos — no de uno. Resolver no es recitar: si una respuesta ya cubre varios puntos del MISMO tema, anótalos todos en mappedAnswers (máximo unos pocos por turno) y no los vuelvas a preguntar.
 - "P" (no aplica) es solo para algo que la persona ya dijo explícitamente que no aplica o no sabe — nunca lo uses para adelantar preguntas que no se han hecho. No marques varias preguntas de temas distintos como "P" en el mismo turno solo por avanzar.
 - Nunca invites a enviar mientras queden puntos pendientes. readyToClose = true SOLO cuando pendiente esté vacío Y la conversación ya cubrió de verdad las seis áreas — nunca en los primeros turnos.
+- El turno en el que pones readyToClose = true es distinto a todos los anteriores: ahí NO hagas otra pregunta. El "reply" de ese turno cierra la conversación — dile a la persona, con calidez y en tus palabras, que ya cubrieron todo lo necesario y que puede revisar y enviar cuando quiera (la pantalla le va a mostrar el botón de envío justo después de tu mensaje, así que tu texto y esa pantalla deben decir lo mismo).
 
 Mapa interno (no lo recites; úsalo para saber qué aún no se ha dicho):
 ${JSON.stringify(INSTRUMENT_CATALOG)}
@@ -398,8 +399,18 @@ Sigue el hilo. Acompaña. Pregunta una sola cosa.`;
     const left = remainingQuestionIds(answeredAfter).count;
     const readyToClose = left === 0;
 
+    // Guardrail: the UI shows a "ready to submit" banner right under this reply
+    // whenever readyToClose is true. The model sometimes still asks another
+    // question on this exact turn instead of closing (own words, temperature
+    // 0.8) — that reads as contradicting the banner appearing right below it.
+    // Force a closing line on this turn so the message and the banner agree.
+    let reply = ai.reply.trim();
+    if (readyToClose && /[?¿][\s"'”)]*$/.test(reply)) {
+      reply += ' Con esto ya cubrimos todo lo necesario — puedes revisar y enviar el diagnóstico cuando quieras.';
+    }
+
     res.json({
-      reply: ai.reply.trim(),
+      reply,
       options: Array.isArray(ai.options) ? ai.options.filter(Boolean).slice(0, 6) : [],
       mappedAnswers,
       companyName: ai.companyName || null,
